@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JONI PES — Neon Hub</title>
+  <meta name="description" content="JONI PES — Portal game neon (eFootball, PUBG, MLBB)" />
+  <style>
+    :root{--bg:#070616;--card:#0b0b1a;--accent1:#7c3aed;--accent2:#06b6d4;--muted:#9aa7bf}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial;background:radial-gradient(800px 400px at 10% 10%, rgba(124,58,237,0.06), transparent),linear-gradient(180deg,var(--bg),#061226);color:#eaf2ff}
+    .wrap{max-width:1100px;margin:28px auto;padding:18px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:grid;place-items:center;font-weight:800;color:#020617}
+    nav{display:flex;gap:10px}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:10px;color:inherit}
+    .cta{background:linear-gradient(90deg,var(--accent1),var(--accent2));border:0;padding:8px 12px;border-radius:10px;color:#020617;font-weight:700}
+    .hero{margin-top:18px;padding:18px;border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);display:grid;grid-template-columns:1fr 340px;gap:18px}
+    .avatar{width:120px;height:120px;border-radius:12px;background:linear-gradient(135deg, rgba(124,58,237,0.14), rgba(6,182,212,0.08));display:grid;place-items:center;font-size:28px;font-weight:800;color:var(--accent2)}
+    .badges{display:flex;gap:8px;margin-top:10px}
+    .badge{background:rgba(255,255,255,0.02);padding:6px 10px;border-radius:999px}
+    .gallery{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .game-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:12px;border-radius:12px;text-align:center;cursor:pointer;border:1px solid rgba(255,255,255,0.03)}
+    .game-card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+    .game-card h4{margin:8px 0 4px}
+    .game-card p{color:var(--muted);font-size:13px}
+    footer{margin-top:20px;text-align:center;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+  <div class="logo">
+    <img src="logo.png" alt="Logo JONI PES" class="joni-logo">
+  </div>
+  <div>
+    <div style="font-weight:800">JONI PES</div>
+    <div style="font-size:12px;color:var(--muted)">Neon gaming hub</div>
+  </div>
+</div>
+      <nav>
+        <button class="btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Tentang</button>
+        <a class="cta" href="#gallery">Games</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div style="display:flex;gap:16px;align-items:center">
+            <div class="avatar">JP</div>
+            <div>
+              <h2 style="margin:0">JONI PES</h2>
+              <p style="margin:6px 0;color:var(--muted)">Neon UI • Mobile & Desktop • Game Configs & Accounts</p>
+              <div class="badges">
+                <div class="badge">Neon</div>
+                <div class="badge">Responsive</div>
+                <div class="badge">Fast</div>
+              </div>
+            </div>
+          </div>
+
+          <section style="margin-top:14px">
+            <h3 id="gallery">Gallery Game</h3>
+            <div class="gallery" style="margin-top:8px">
+              <div class="game-card" onclick="openGame('games/efootball.html')">
+                <img src="https://images.unsplash.com/photo-1526403224740-0f8f3f5f3b2a?auto=format&fit=crop&w=800&q=60">
+                <h4>eFootball</h4><p>Config & akun siap pakai</p>
+              </div>
+
+              <div class="game-card" onclick="openGame('games/pubg.html')">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=60">
+                <h4>PUBG</h4><p>Optimasi & stok akun</p>
+              </div>
+
+              <div class="game-card" onclick="openGame('games/mlbb.html')">
+                <img src="https://images.unsplash.com/photo-1527866959252-6c2b55a4b3a1?auto=format&fit=crop&w=800&q=60">
+                <h4>MLBB</h4><p>Config & hero builds</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="about" style="margin-top:18px;padding:14px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent)">
+        <h3>Tentang</h3>
+        <p style="color:var(--muted)">Portal JONI PES. Klik game untuk membuka halaman dengan menu CONFIG dan STOK AKUN.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div style="margin-top:18px;color:var(--muted)">© JONI PES — Neon Hub</div>
+    </footer>
+  </div>
+
+  <script>
+    function openGame(path){
+      window.open(path, '_blank');
+    }
+  </script>
+</body>
+</html>
