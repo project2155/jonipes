@@ -4,36 +4,88 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PUBG Mobile - JONI PES</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #20003d, #000);
+      color: white; text-align: center; padding: 20px;
+    }
+    img { width: 120px; border-radius: 20px; box-shadow: 0 0 25px #7f00ff; }
+    h1 { color: #c084fc; margin-top: 10px; }
+    .btn {
+      background: linear-gradient(90deg, #7f00ff, #00b3ff);
+      padding: 12px 25px; border-radius: 10px; text-decoration: none;
+      color: white; margin: 8px; display: inline-block; font-weight: bold;
+    }
+    table {
+      margin: 20px auto; width: 90%; border-collapse: collapse;
+      border-radius: 10px; overflow: hidden;
+    }
+    th, td { border: 1px solid #3a0ca3; padding: 12px; }
+    th { background: #3a0ca3; } tr:nth-child(even) { background: #1a0033; }
+    .section { display: none; animation: fadeIn 0.4s ease-in; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: translateY(0);} }
+    .pay-btn {
+      background: linear-gradient(90deg, #7f00ff, #00b3ff);
+      padding: 12px 18px; border-radius: 10px; color: white;
+      font-weight: bold; text-decoration: none;
+    }
+    .payment-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 10px; }
+    .footer { margin-top: 20px; font-size: 0.9em; }
+  </style>
 </head>
 <body>
-  <img src="../assets/logo/logo-pubg.png" alt="PUBG Logo">
+  <img src="./assets/logo/logo-pubg.png" alt="PUBG Logo">
   <h1>PUBG Mobile</h1>
   <p>Config dan Akun Siap Pakai</p>
 
-  <a class="btn" href="#">CONFIG</a>
-  <a class="btn" href="#">STOK AKUN</a>
+  <div>
+    <button class="btn" onclick="showSection('config')">CONFIG</button>
+    <button class="btn" onclick="showSection('stok')">STOK AKUN</button>
+  </div>
 
-  <h2>Stok Akun PUBG</h2>
-  <table>
-    <tr><th>Nama / Jenis Akun</th><th>Rank / Divisi</th><th>Harga</th></tr>
-    <tr><td>Akun Conqueror</td><td>Tier S+</td><td>Rp 300.000</td></tr>
-    <tr><td>Akun Rookie</td><td>Tier C</td><td>Rp 75.000</td></tr>
-  </table>
+  <div id="config" class="section">
+    <h2>Daftar Config PUBG</h2>
+    <table>
+      <tr><th>Nama Config</th><th>Jenis</th><th>Keterangan</th></tr>
+      <tr><td>Ultra Graphics</td><td>Visual</td><td>Grafis tinggi tanpa lag</td></tr>
+      <tr><td>Aim Stabilizer</td><td>Control</td><td>Kontrol bidikan lebih halus</td></tr>
+      <tr><td>Sound Boost</td><td>Audio</td><td>Langkah musuh terdengar jelas</td></tr>
+    </table>
+    <a class="btn" href="#">⬇️ Download (MediaFire)</a>
+  </div>
 
-  <h3>Pembayaran Langsung</h3>
-  <div class="payment-buttons">
-    <a class="pay-btn" href="#"> DANA</a>
-    <a class="pay-btn" href="#"> OVO</a>
-    <a class="pay-btn" href="#"> GoPay</a>
-    <a class="pay-btn" href="#"> BCA</a>
+  <div id="stok" class="section">
+    <h2>Stok Akun PUBG</h2>
+    <table>
+      <tr><th>Nama / Jenis Akun</th><th>Rank / Divisi</th><th>Harga</th></tr>
+      <tr><td>Akun Ace</td><td>Ace</td><td>Rp 200.000</td></tr>
+      <tr><td>Akun Crown</td><td>Crown</td><td>Rp 120.000</td></tr>
+      <tr><td>Akun Diamond</td><td>Diamond</td><td>Rp 80.000</td></tr>
+    </table>
+
+    <h3>Pembayaran Langsung</h3>
+    <div class="payment-buttons">
+      <a class="pay-btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni%2C%20saya%20mau%20bayar%20pakai%20DANA%20untuk%20akun%20PUBG" target="_blank">  DANA</a>
+      <a class="pay-btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni%2C%20saya%20mau%20bayar%20pakai%20OVO%20untuk%20akun%20PUBG" target="_blank">  OVO</a>
+      <a class="pay-btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni%2C%20saya%20mau%20bayar%20pakai%20GoPay%20untuk%20akun%20PUBG" target="_blank">  GoPay</a>
+      <a class="pay-btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni%2C%20saya%20mau%20bayar%20lewat%20BCA%20untuk%20akun%20PUBG" target="_blank">  BCA</a>
+    </div>
   </div>
 
   <div class="footer">
     <p>Hubungi Bang Joni sebelum membeli:</p>
-    <p> Instagram: <a href="https://instagram.com/jonipes" target="_blank">@jonipes</a></p>
-    <p> WhatsApp: <a href="https://wa.me/6281234567890">+62 812-3456-7890</a></p>
+    <p>📸 Instagram: <a href="https://www.instagram.com/ancha_kurniawan?igsh=cTNkcXZ3NzRoODRy">@jonipes</a></p>
+    <p>💬 WhatsApp: <a href="https://wa.me/6289507676856">+62 812-3456-7890</a></p>
     <a class="btn" href="../index.html">⬅ Kembali ke Beranda</a>
   </div>
+
+  <script>
+    function showSection(id) {
+      document.getElementById('config').style.display = 'none';
+      document.getElementById('stok').style.display = 'none';
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
 </body>
 </html>
