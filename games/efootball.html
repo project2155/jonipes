@@ -27,6 +27,7 @@
       margin: 8px;
       display: inline-block;
       font-weight: bold;
+      cursor: pointer;
     }
     table {
       margin: 20px auto;
@@ -41,6 +42,11 @@
     }
     th { background: #3a0ca3; }
     tr:nth-child(even) { background: #1a0033; }
+    .section { display: none; animation: fadeIn 0.4s ease-in; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
     .pay-btn {
       background: linear-gradient(90deg, #7f00ff, #00b3ff);
       border: none; padding: 12px 18px;
@@ -55,26 +61,43 @@
   </style>
 </head>
 <body>
-  <img src="../assets/logo/logo-efootball.png" alt="eFootball Logo">
+  <img src="./assets/logo/logo-efootball.png" alt="eFootball Logo">
   <h1>eFootball Mobile</h1>
   <p>Config dan Akun Siap Pakai</p>
 
-  <a class="btn" href="#">CONFIG</a>
-  <a class="btn" href="#">STOK AKUN</a>
+  <div>
+    <button class="btn" onclick="showSection('config')">CONFIG</button>
+    <button class="btn" onclick="showSection('stok')">STOK AKUN</button>
+  </div>
 
-  <h2>Stok Akun eFootball</h2>
-  <table>
-    <tr><th>Nama / Jenis Akun</th><th>Rank / Divisi</th><th>Harga</th></tr>
-    <tr><td>Akun Epic</td><td>Legendary</td><td>Rp 150.000</td></tr>
-    <tr><td>Akun Starter</td><td>Bronze</td><td>Rp 50.000</td></tr>
-  </table>
+  <!-- CONFIG -->
+  <div id="config" class="section">
+    <h2>Daftar Config eFootball</h2>
+    <table>
+      <tr><th>Nama Config</th><th>Jenis</th><th>Keterangan</th></tr>
+      <tr><td>Ultra Graphics</td><td>Visual</td><td>Grafis tinggi tanpa lag</td></tr>
+      <tr><td>Low Ping Fix</td><td>Network</td><td>Stabilkan koneksi server</td></tr>
+      <tr><td>No Crowd Mode</td><td>Optimasi</td><td>FPS stabil tanpa penonton</td></tr>
+    </table>
+    <a class="btn" href="#"> Download (Config Here)</a>
+  </div>
 
-  <h3>Pembayaran Langsung</h3>
-  <div class="payment-buttons">
-    <a class="pay-btn" href="#"> DANA</a>
-    <a class="pay-btn" href="#"> OVO</a>
-    <a class="pay-btn" href="#"> GoPay</a>
-    <a class="pay-btn" href="#"> BCA</a>
+  <!-- STOK AKUN -->
+  <div id="stok" class="section">
+    <h2>Stok Akun eFootball</h2>
+    <table>
+      <tr><th>Nama / Jenis Akun</th><th>Rank / Divisi</th><th>Harga</th></tr>
+      <tr><td>Akun Epic</td><td>Legendary</td><td>Rp 150.000</td></tr>
+      <tr><td>Akun Starter</td><td>Bronze</td><td>Rp 50.000</td></tr>
+    </table>
+
+    <h3>Pembayaran Langsung</h3>
+    <div class="payment-buttons">
+      <a class="pay-btn" href="#"> DANA</a>
+      <a class="pay-btn" href="#"> OVO</a>
+      <a class="pay-btn" href="#"> GoPay</a>
+      <a class="pay-btn" href="#"> BCA</a>
+    </div>
   </div>
 
   <div class="footer">
@@ -83,5 +106,13 @@
     <p> WhatsApp: <a href="https://wa.me/6281234567890">+62 812-3456-7890</a></p>
     <a class="btn" href="../index.html">⬅ Kembali ke Beranda</a>
   </div>
+
+  <script>
+    function showSection(id) {
+      document.getElementById('config').style.display = 'none';
+      document.getElementById('stok').style.display = 'none';
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
 </body>
 </html>
