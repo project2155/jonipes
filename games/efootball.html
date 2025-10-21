@@ -3,64 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>eFootball - JONI PES</title>
+  <title>eFootball Mobile - JONI PES</title>
   <style>
-    body {font-family: 'Poppins', sans-serif; background: radial-gradient(circle at top, #1b0034, #000010); color: white; text-align: center; margin: 0;}
-    img.logo {width: 100px; margin: 20px auto; display: block; border-radius: 12px; box-shadow: 0 0 15px #7f00ff;}
-    h1 {color: #b266ff;}
-    .tabs button {background: linear-gradient(90deg, #7f00ff, #00b3ff); border: none; color: white; padding: 12px 24px; border-radius: 12px; cursor: pointer; margin: 8px; font-weight: bold;}
-    .section {display: none; padding: 20px; animation: fade 0.5s;}
-    .active {display: block;}
-    table {width: 90%; margin: 10px auto; border-collapse: collapse;}
-    th, td {border: 1px solid #5f00ff; padding: 10px;}
-    th {background-color: #220044; color: #b366ff;}
-    tr:nth-child(even) {background-color: #110022;}
-    .pay-btn {background: linear-gradient(90deg, #7f00ff, #00b3ff); border: none; padding: 12px 18px; border-radius: 10px; margin: 6px; color: white; font-weight: bold; text-decoration: none;}
-    footer {margin-top: 30px; color: #ccc;}
-    a {color: #6cf; text-decoration: none;}
-    @keyframes fade {from {opacity:0;} to {opacity:1;}}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #20003d, #000);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    img {
+      width: 120px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px #7f00ff;
+    }
+    h1 { color: #c084fc; margin-top: 10px; }
+    .btn {
+      background: linear-gradient(90deg, #7f00ff, #00b3ff);
+      padding: 12px 25px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      margin: 8px;
+      display: inline-block;
+      font-weight: bold;
+    }
+    table {
+      margin: 20px auto;
+      width: 90%;
+      border-collapse: collapse;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      border: 1px solid #3a0ca3;
+      padding: 12px;
+    }
+    th { background: #3a0ca3; }
+    tr:nth-child(even) { background: #1a0033; }
+    .pay-btn {
+      background: linear-gradient(90deg, #7f00ff, #00b3ff);
+      border: none; padding: 12px 18px;
+      border-radius: 10px; color: white;
+      font-weight: bold; text-decoration: none;
+    }
+    .payment-buttons {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 10px; margin-top: 10px;
+    }
+    .footer { margin-top: 20px; font-size: 0.9em; }
   </style>
 </head>
 <body>
-  <img src="logo-efootball.png" alt="eFootball" class="logo" />
+  <img src="../assets/logo/logo-efootball.png" alt="eFootball Logo">
   <h1>eFootball Mobile</h1>
   <p>Config dan Akun Siap Pakai</p>
 
-  <div class="tabs">
-    <button onclick="showSection('config')">CONFIG</button>
-    <button onclick="showSection('stok')">STOK AKUN</button>
+  <a class="btn" href="#">CONFIG</a>
+  <a class="btn" href="#">STOK AKUN</a>
+
+  <h2>Stok Akun eFootball</h2>
+  <table>
+    <tr><th>Nama / Jenis Akun</th><th>Rank / Divisi</th><th>Harga</th></tr>
+    <tr><td>Akun Epic</td><td>Legendary</td><td>Rp 150.000</td></tr>
+    <tr><td>Akun Starter</td><td>Bronze</td><td>Rp 50.000</td></tr>
+  </table>
+
+  <h3>Pembayaran Langsung</h3>
+  <div class="payment-buttons">
+    <a class="pay-btn" href="#"> DANA</a>
+    <a class="pay-btn" href="#"> OVO</a>
+    <a class="pay-btn" href="#"> GoPay</a>
+    <a class="pay-btn" href="#"> BCA</a>
   </div>
 
-  <div id="config" class="section active">
-    <h2>Daftar Config eFootball</h2>
-    <table>
-      <tr><th>Nama Config</th><th>Jenis</th><th>Keterangan</th></tr>
-      <tr><td>Gameplay Smooth</td><td>Visual</td><td>Optimalkan FPS</td></tr>
-      <tr><td>Low Lag Fix</td><td>Network</td><td>Kurangi delay saat bermain</td></tr>
-    </table>
-    <a class="pay-btn" href="YOUR_MEDIAFIRE_LINK" target="_blank">⬇️ Download (MediaFire)</a>
+  <div class="footer">
+    <p>Hubungi Bang Joni sebelum membeli:</p>
+    <p> Instagram: <a href="https://instagram.com/jonipes" target="_blank">@jonipes</a></p>
+    <p> WhatsApp: <a href="https://wa.me/6281234567890">+62 812-3456-7890</a></p>
+    <a class="btn" href="../index.html">⬅ Kembali ke Beranda</a>
   </div>
-
-  <div id="stok" class="section">
-    <h2>Stok Akun eFootball</h2>
-    <table>
-      <tr><th>Nama / Jenis Akun</th><th>Rank / Divisi</th><th>Harga</th></tr>
-      <tr><td>Akun Epic</td><td>Legendary</td><td>Rp 150.000</td></tr>
-      <tr><td>Akun Starter</td><td>Bronze</td><td>Rp 50.000</td></tr>
-    </table>
-    <h3>Pembayaran Langsung</h3>
-    <a class="pay-btn" href="YOUR_DANA_LINK" target="_blank">💙 DANA</a>
-    <a class="pay-btn" href="YOUR_OVO_LINK" target="_blank">💜 OVO</a>
-    <a class="pay-btn" href="YOUR_GOPAY_LINK" target="_blank">💚 GoPay</a>
-    <a class="pay-btn" href="YOUR_BCA_LINK" target="_blank">🏦 BCA</a>
-    <p style="margin-top:15px;color:#bbb;font-size:14px;">Hubungi Bang Joni: 
-    <a href="https://instagram.com/jonipes">@jonipes</a> |
-    <a href="https://wa.me/YOUR_WA_NUMBER">+62xxxxxxxxxx</a></p>
-  </div>
-
-  <footer><a href="../index.html">⬅️ Kembali ke Beranda</a></footer>
-  <script>
-    function showSection(id){document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');}
-  </script>
 </body>
 </html>
