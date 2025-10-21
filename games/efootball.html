@@ -1,216 +1,187 @@
 <!doctype html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>JONI PES — Neon Hub</title>
-  <meta name="description" content="Portal game neon (eFootball, PUBG, MLBB) — Config & Akun Siap Pakai" />
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>eFootball — JONI PES</title>
   <style>
-    :root {
-      --bg: #070616;
-      --card: #0b0b1a;
-      --accent1: #7c3aed;
-      --accent2: #06b6d4;
-      --muted: #9aa7bf;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: "Inter", system-ui, Arial, sans-serif;
-      background: radial-gradient(800px 400px at 10% 10%, rgba(124, 58, 237, 0.06), transparent),
-                  linear-gradient(180deg, var(--bg), #061226);
+      font-family: "Inter", sans-serif;
+      background: linear-gradient(180deg, #12071f, #2d0a4a);
       color: #eaf2ff;
+      text-align: center;
+      padding: 20px;
     }
 
-    .wrap {
-      max-width: 1100px;
-      margin: 28px auto;
-      padding: 18px;
+    header img {
+      width: 90px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px #7c3aed;
     }
 
-    header {
+    h1 {
+      margin: 10px 0 0;
+      font-size: 26px;
+      color: #b691ff;
+    }
+
+    p {
+      margin: 5px 0 20px;
+      color: #aaa7c3;
+      font-size: 14px;
+    }
+
+    .menu {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo img {
-      width: 56px;
-      height: 56px;
-      border-radius: 12px;
-      border: 2px solid var(--accent2);
-      box-shadow: 0 0 12px rgba(6, 182, 212, 0.6);
-    }
-
-    .brand div {
-      line-height: 1.2;
-    }
-
-    .brand h1 {
-      font-size: 18px;
-      font-weight: 700;
-      margin: 0;
-    }
-
-    .brand p {
-      font-size: 12px;
-      color: var(--muted);
-      margin: 0;
-    }
-
-    nav {
-      display: flex;
-      gap: 10px;
-    }
-
-    .btn {
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.1);
-      padding: 8px 12px;
+    .menu a {
+      display: inline-block;
+      padding: 10px 22px;
       border-radius: 10px;
-      color: #eaf2ff;
-      font-weight: 500;
-    }
-
-    .cta {
-      background: linear-gradient(90deg, var(--accent1), var(--accent2));
-      border: 0;
-      padding: 8px 12px;
-      border-radius: 10px;
+      background: linear-gradient(90deg, #7c3aed, #06b6d4);
       color: #020617;
       font-weight: 700;
       text-decoration: none;
+      box-shadow: 0 0 12px rgba(124, 58, 237, 0.4);
     }
 
-    main {
-      margin-top: 28px;
+    section {
+      margin: 28px auto;
+      max-width: 800px;
+      text-align: left;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 0 12px rgba(124, 58, 237, 0.2);
     }
 
-    .hero {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-
-    .hero h2 {
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: 16px;
-      padding: 14px;
-      text-align: center;
-      box-shadow: 0 0 20px rgba(124, 58, 237, 0.08);
-      transition: transform 0.2s;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
-    }
-
-    .card img {
+    table {
       width: 100%;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 8px;
+      border-collapse: collapse;
+      margin-top: 10px;
+      color: #eaf2ff;
     }
 
-    .card h4 {
-      margin: 4px 0;
+    th, td {
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: left;
+      font-size: 14px;
+    }
+
+    th {
+      background: rgba(124, 58, 237, 0.2);
+      color: #dcd2ff;
+    }
+
+    .btn-download {
+      display: inline-block;
+      margin-top: 12px;
+      background: linear-gradient(90deg, #7c3aed, #06b6d4);
+      color: #020617;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 12px rgba(124, 58, 237, 0.4);
     }
 
     footer {
       text-align: center;
-      margin-top: 36px;
-      color: var(--muted);
+      color: #aaa7c3;
+      margin-top: 30px;
       font-size: 14px;
+    }
+
+    .contact {
+      margin-top: 10px;
+    }
+
+    .contact a {
+      color: #06b6d4;
+      text-decoration: none;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 20px;
+      color: #9aa7bf;
+      text-decoration: none;
+    }
+
+    .hidden {
+      display: none;
     }
 
   </style>
 </head>
-
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo">
-          <img src="logo.png" alt="Logo JONI PES" />
-        </div>
-        <div>
-          <h1>JONI PES</h1>
-          <p>Neon gaming hub</p>
-        </div>
-      </div>
 
-      <nav>
-        <button class="btn" onclick="scrollToSection('about')">Tentang</button>
-        <a class="cta" href="#gallery">Games</a>
-      </nav>
-    </header>
+  <header>
+    <img src="../logo.png" alt="Logo JONI PES">
+    <h1>eFootball</h1>
+    <p>Menu game eFootball — Config & Stok Akun</p>
+  </header>
 
-    <main>
-      <section class="hero">
-        <h2>JONI PES</h2>
-        <p>Neon UI • Game Configs & Accounts</p>
-      </section>
-
-      <section id="gallery" class="gallery">
-        <div class="card" onclick="openGame('games/efootball.html')">
-          <img src="https://i.ibb.co/9h3wHbb/efootball.jpg" alt="eFootball" />
-          <h4>eFootball</h4>
-          <p>Config & akun siap pakai</p>
-        </div>
-
-        <div class="card" onclick="openGame('games/pubg.html')">
-          <img src="https://i.ibb.co/3fkBcHb/pubg.jpg" alt="PUBG" />
-          <h4>PUBG</h4>
-          <p>Optimasi & stok akun</p>
-        </div>
-
-        <div class="card" onclick="openGame('games/mlbb.html')">
-          <img src="https://i.ibb.co/7zMTqVz/mlbb.jpg" alt="MLBB" />
-          <h4>MLBB</h4>
-          <p>Config & hero builds</p>
-        </div>
-      </section>
-
-      <section id="about" style="margin-top:28px; background:rgba(255,255,255,0.02); padding:16px; border-radius:12px;">
-        <h3>Tentang</h3>
-        <p>Portal JONI PES. Klik game untuk membuka halaman dengan menu CONFIG dan STOK AKUN.</p>
-      </section>
-    </main>
-
-    <footer>
-      © 2025 JONI PES — Neon Hub
-    </footer>
+  <div class="menu">
+    <a href="#" onclick="showSection('config')">CONFIG</a>
+    <a href="#" onclick="showSection('stok')">STOK AKUN</a>
   </div>
 
-  <script>
-    function openGame(path) {
-      window.open(path, "_blank");
-    }
+  <!-- CONFIG SECTION -->
+  <section id="config" class="hidden">
+    <h2>⚙️ Daftar Config eFootball</h2>
+    <p>Berikut contoh format config, nanti kamu bisa isi manual sesuai kebutuhan.</p>
+    <table>
+      <tr><th>Nama Config</th><th>Jenis</th><th>Keterangan</th></tr>
+      <tr><td>Config Passing Pro</td><td>Gameplay</td><td>Kontrol umpan realistis</td></tr>
+      <tr><td>Defence Plus</td><td>AI / Taktik</td><td>AI bertahan lebih agresif</td></tr>
+    </table>
 
-    function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    <a href="#" class="btn-download">🔽 Download dari Mediafire</a>
+  </section>
+
+  <!-- STOK AKUN SECTION -->
+  <section id="stok" class="hidden">
+    <h2>💾 Stok Akun eFootball</h2>
+    <table>
+      <tr><th>Nama Akun</th><th>Rank / Divisi</th><th>Harga</th></tr>
+      <tr><td>Akun Premium 1</td><td>Divisi 1</td><td>Rp 150.000</td></tr>
+      <tr><td>Akun Starter</td><td>Divisi 3</td><td>Rp 50.000</td></tr>
+    </table>
+
+    <h3>Pembayaran Tersedia</h3>
+    <ul style="list-style:none; padding:0;">
+      <li>📱 DANA</li>
+      <li>💳 OVO</li>
+      <li>🏦 BCA</li>
+      <li>💸 GOPAY</li>
+    </ul>
+
+    <p><strong>🔗 Link Pembayaran:</strong> (nanti kamu bisa tambahkan link e-wallet di sini)</p>
+  </section>
+
+  <footer>
+    <p><strong>Sebelum melakukan pembelian</strong>, silakan hubungi Bang JONI:</p>
+    <div class="contact">
+      📸 Instagram: <a href="https://instagram.com/jonipes" target="_blank">@jonipes</a><br>
+      💬 WhatsApp: <a href="https://wa.me/6281234567890" target="_blank">+62 812-3456-7890</a>
+    </div>
+
+    <a href="../index.html" class="back">⬅️ Kembali ke Beranda</a>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.getElementById("config").classList.add("hidden");
+      document.getElementById("stok").classList.add("hidden");
+      document.getElementById(id).classList.remove("hidden");
     }
   </script>
 </body>
