@@ -4,81 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PUBG Mobile - JONI PES</title>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: radial-gradient(circle at top, #1b0034, #000010);
-      color: white;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-    img.logo { width: 100px; margin: 20px auto; display: block; border-radius: 12px; box-shadow: 0 0 15px #7f00ff; }
-    h1 { color: #b266ff; }
-    .tabs button {
-      background: linear-gradient(90deg, #7f00ff, #00b3ff);
-      border: none; color: white;
-      padding: 12px 24px; border-radius: 12px; cursor: pointer;
-      margin: 8px; font-weight: bold;
-    }
-    .section { display: none; padding: 20px; animation: fade 0.5s; }
-    .active { display: block; }
-    table { width: 90%; margin: 10px auto; border-collapse: collapse; border-radius: 10px; overflow: hidden; }
-    th, td { border: 1px solid #5f00ff; padding: 10px; }
-    th { background-color: #220044; color: #b366ff; }
-    tr:nth-child(even) { background-color: #110022; }
-    .pay-btn { background: linear-gradient(90deg, #7f00ff, #00b3ff); border: none; padding: 12px 18px; border-radius: 10px; margin: 6px; color: white; font-weight: bold; cursor: pointer; }
-    footer { margin-top: 30px; color: #ccc; }
-    a { color: #6cf; text-decoration: none; }
-    @keyframes fade { from {opacity:0;} to {opacity:1;} }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <img src="logo-pubg.png" alt="PUBG" class="logo" />
+  <img src="../assets/logo/logo-pubg.png" alt="PUBG Logo">
   <h1>PUBG Mobile</h1>
   <p>Config dan Akun Siap Pakai</p>
 
-  <div class="tabs">
-    <button onclick="showSection('config')">CONFIG</button>
-    <button onclick="showSection('stok')">STOK AKUN</button>
+  <a class="btn" href="#">CONFIG</a>
+  <a class="btn" href="#">STOK AKUN</a>
+
+  <h2>Stok Akun PUBG</h2>
+  <table>
+    <tr><th>Nama / Jenis Akun</th><th>Rank / Divisi</th><th>Harga</th></tr>
+    <tr><td>Akun Conqueror</td><td>Tier S+</td><td>Rp 300.000</td></tr>
+    <tr><td>Akun Rookie</td><td>Tier C</td><td>Rp 75.000</td></tr>
+  </table>
+
+  <h3>Pembayaran Langsung</h3>
+  <div class="payment-buttons">
+    <a class="pay-btn" href="#"> DANA</a>
+    <a class="pay-btn" href="#"> OVO</a>
+    <a class="pay-btn" href="#"> GoPay</a>
+    <a class="pay-btn" href="#"> BCA</a>
   </div>
 
-  <div id="config" class="section active">
-    <h2>Daftar Config PUBG</h2>
-    <table>
-      <tr><th>Nama Config</th><th>Jenis</th><th>Keterangan</th></tr>
-      <tr><td>Ultra Graphics</td><td>Visual</td><td>Grafis tinggi tanpa lag</td></tr>
-      <tr><td>Low Ping Fix</td><td>Network</td><td>Stabilkan koneksi server</td></tr>
-    </table>
-    <button class="pay-btn">⬇️ Download (MediaFire)</button>
-  </div>
-
-  <div id="stok" class="section">
-    <h2>Stok Akun PUBG</h2>
-    <table>
-      <tr><th>Nama / Jenis Akun</th><th>Rank / Divisi</th><th>Harga</th></tr>
-      <tr><td>Akun Pro</td><td>Conqueror</td><td>Rp 250.000</td></tr>
-      <tr><td>Akun Pemula</td><td>Diamond</td><td>Rp 100.000</td></tr>
-    </table>
-    <h3>Pembayaran Langsung</h3>
-    <button class="pay-btn">DANA</button>
-    <button class="pay-btn">OVO</button>
-    <button class="pay-btn">GOPAY</button>
-    <button class="pay-btn">BCA</button>
-  </div>
-
-  <footer>
+  <div class="footer">
     <p>Hubungi Bang Joni sebelum membeli:</p>
-    <p>📸 Instagram: <a href="https://instagram.com/jonipes">@jonipes</a><br>
-    💬 WhatsApp: <a href="https://wa.me/6281234567890">+62 812-3456-7890</a></p>
-    <a href="../index.html">⬅️ Kembali ke Beranda</a>
-  </footer>
-
-  <script>
-    function showSection(id) {
-      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-  </script>
+    <p> Instagram: <a href="https://instagram.com/jonipes" target="_blank">@jonipes</a></p>
+    <p> WhatsApp: <a href="https://wa.me/6281234567890">+62 812-3456-7890</a></p>
+    <a class="btn" href="../index.html">⬅ Kembali ke Beranda</a>
+  </div>
 </body>
 </html>
