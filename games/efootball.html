@@ -1,188 +1,138 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>eFootball — JONI PES</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eFootball - JONI PES</title>
+  <link rel="icon" type="image/png" href="../logo.png" />
   <style>
     body {
-      margin: 0;
-      font-family: "Inter", sans-serif;
-      background: linear-gradient(180deg, #12071f, #2d0a4a);
-      color: #eaf2ff;
+      background: linear-gradient(180deg, #120020, #090014);
+      color: white;
+      font-family: "Poppins", sans-serif;
       text-align: center;
+      margin: 0;
       padding: 20px;
     }
 
-    header img {
-      width: 90px;
-      border-radius: 20px;
-      box-shadow: 0 0 15px #7c3aed;
+    img.logo {
+      width: 120px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px #7c3aed;
+      margin-top: 20px;
     }
 
     h1 {
-      margin: 10px 0 0;
-      font-size: 26px;
-      color: #b691ff;
-    }
-
-    p {
-      margin: 5px 0 20px;
-      color: #aaa7c3;
-      font-size: 14px;
-    }
-
-    .menu {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
-
-    .menu a {
-      display: inline-block;
-      padding: 10px 22px;
-      border-radius: 10px;
-      background: linear-gradient(90deg, #7c3aed, #06b6d4);
-      color: #020617;
-      font-weight: 700;
-      text-decoration: none;
-      box-shadow: 0 0 12px rgba(124, 58, 237, 0.4);
-    }
-
-    section {
-      margin: 28px auto;
-      max-width: 800px;
-      text-align: left;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 14px;
-      padding: 16px;
-      box-shadow: 0 0 12px rgba(124, 58, 237, 0.2);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
+      color: #7c3aed;
       margin-top: 10px;
-      color: #eaf2ff;
+      font-size: 28px;
     }
 
-    th, td {
-      padding: 10px;
+    .btn {
+      background: linear-gradient(90deg, #9333ea, #3b82f6);
+      border: none;
+      color: white;
+      padding: 12px 25px;
+      margin: 10px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #7c3aed;
+    }
+
+    .table {
+      margin: 20px auto;
+      width: 90%;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .table th, .table td {
       border: 1px solid rgba(255, 255, 255, 0.1);
-      text-align: left;
-      font-size: 14px;
+      padding: 10px;
     }
 
-    th {
+    .table th {
       background: rgba(124, 58, 237, 0.2);
-      color: #dcd2ff;
     }
 
-    .btn-download {
+    .pay {
+      margin-top: 20px;
+    }
+
+    .pay a {
       display: inline-block;
-      margin-top: 12px;
-      background: linear-gradient(90deg, #7c3aed, #06b6d4);
-      color: #020617;
-      font-weight: 700;
-      padding: 8px 14px;
+      background: #7c3aed;
+      color: white;
+      padding: 10px 18px;
+      margin: 5px;
       border-radius: 8px;
       text-decoration: none;
-      box-shadow: 0 0 12px rgba(124, 58, 237, 0.4);
     }
 
-    footer {
-      text-align: center;
-      color: #aaa7c3;
+    .contact {
       margin-top: 30px;
       font-size: 14px;
     }
 
-    .contact {
-      margin-top: 10px;
-    }
-
-    .contact a {
-      color: #06b6d4;
-      text-decoration: none;
-    }
-
     .back {
-      display: inline-block;
-      margin-top: 20px;
-      color: #9aa7bf;
+      display: block;
+      margin-top: 30px;
+      color: #7c3aed;
       text-decoration: none;
     }
-
-    .hidden {
-      display: none;
-    }
-
   </style>
 </head>
 <body>
+  <img src="logo-efootball.png" alt="eFootball" class="logo" />
+  <h1>eFootball</h1>
+  <p>Config dan Akun Siap Pakai</p>
 
-  <header>
-    <img src="../logo.png" alt="Logo JONI PES">
-    <h1>eFootball</h1>
-    <p>Menu game eFootball — Config & Stok Akun</p>
-  </header>
+  <button class="btn">CONFIG</button>
+  <button class="btn">STOK AKUN</button>
 
-  <div class="menu">
-    <a href="#" onclick="showSection('config')">CONFIG</a>
-    <a href="#" onclick="showSection('stok')">STOK AKUN</a>
+  <h2>Daftar Config eFootball</h2>
+  <table class="table">
+    <tr>
+      <th>Nama Config</th>
+      <th>Jenis</th>
+      <th>Keterangan</th>
+    </tr>
+    <tr>
+      <td>Ultra Touch</td>
+      <td>Gameplay</td>
+      <td>Kontrol lebih halus dan responsif</td>
+    </tr>
+    <tr>
+      <td>FPS Boost</td>
+      <td>Grafis</td>
+      <td>Optimasi 60FPS untuk semua perangkat</td>
+    </tr>
+  </table>
+
+  <a href="#" class="btn">⬇️ Download (MediaFire)</a>
+
+  <div class="pay">
+    <h3>Pembayaran Langsung</h3>
+    <a href="#">DANA</a>
+    <a href="#">OVO</a>
+    <a href="#">GOPAY</a>
+    <a href="#">BCA</a>
   </div>
 
-  <!-- CONFIG SECTION -->
-  <section id="config" class="hidden">
-    <h2>⚙️ Daftar Config eFootball</h2>
-    <p>Berikut contoh format config, nanti kamu bisa isi manual sesuai kebutuhan.</p>
-    <table>
-      <tr><th>Nama Config</th><th>Jenis</th><th>Keterangan</th></tr>
-      <tr><td>Config Passing Pro</td><td>Gameplay</td><td>Kontrol umpan realistis</td></tr>
-      <tr><td>Defence Plus</td><td>AI / Taktik</td><td>AI bertahan lebih agresif</td></tr>
-    </table>
+  <div class="contact">
+    <p>Hubungi Bang Joni sebelum membeli:</p>
+    <p>📸 Instagram: <a href="https://instagram.com/jonipes" style="color:#7c3aed;">@jonipes</a></p>
+    <p>💬 WhatsApp: <a href="https://wa.me/6281234567890" style="color:#7c3aed;">+62 812-3456-7890</a></p>
+  </div>
 
-    <a href="#" class="btn-download">🔽 Download dari Mediafire</a>
-  </section>
-
-  <!-- STOK AKUN SECTION -->
-  <section id="stok" class="hidden">
-    <h2>💾 Stok Akun eFootball</h2>
-    <table>
-      <tr><th>Nama Akun</th><th>Rank / Divisi</th><th>Harga</th></tr>
-      <tr><td>Akun Premium 1</td><td>Divisi 1</td><td>Rp 150.000</td></tr>
-      <tr><td>Akun Starter</td><td>Divisi 3</td><td>Rp 50.000</td></tr>
-    </table>
-
-    <h3>Pembayaran Tersedia</h3>
-    <ul style="list-style:none; padding:0;">
-      <li>📱 DANA</li>
-      <li>💳 OVO</li>
-      <li>🏦 BCA</li>
-      <li>💸 GOPAY</li>
-    </ul>
-
-    <p><strong>🔗 Link Pembayaran:</strong> (nanti kamu bisa tambahkan link e-wallet di sini)</p>
-  </section>
-
-  <footer>
-    <p><strong>Sebelum melakukan pembelian</strong>, silakan hubungi Bang JONI:</p>
-    <div class="contact">
-      📸 Instagram: <a href="https://instagram.com/jonipes" target="_blank">@jonipes</a><br>
-      💬 WhatsApp: <a href="https://wa.me/6281234567890" target="_blank">+62 812-3456-7890</a>
-    </div>
-
-    <a href="../index.html" class="back">⬅️ Kembali ke Beranda</a>
-  </footer>
-
-  <script>
-    function showSection(id) {
-      document.getElementById("config").classList.add("hidden");
-      document.getElementById("stok").classList.add("hidden");
-      document.getElementById(id).classList.remove("hidden");
-    }
-  </script>
+  <a href="../index.html" class="back">⬅️ Kembali ke Beranda</a>
 </body>
 </html>
