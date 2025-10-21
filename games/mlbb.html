@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MLBB — JONI PES</title>
+  <style>
+    body {margin:0;font-family:"Inter",sans-serif;background:linear-gradient(180deg,#12071f,#2d0a4a);color:#eaf2ff;text-align:center;padding:20px;}
+    header img {width:90px;border-radius:20px;box-shadow:0 0 15px #7c3aed;}
+    h1 {color:#b691ff;}
+    .menu {display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:20px 0;}
+    .menu a {display:inline-block;padding:10px 22px;border-radius:10px;background:linear-gradient(90deg,#7c3aed,#06b6d4);color:#020617;font-weight:700;text-decoration:none;}
+    section {margin:28px auto;max-width:800px;text-align:left;background:rgba(255,255,255,0.05);border-radius:14px;padding:16px;box-shadow:0 0 12px rgba(124,58,237,0.2);}
+    table {width:100%;border-collapse:collapse;margin-top:10px;color:#eaf2ff;}
+    th,td {padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;font-size:14px;}
+    th {background:rgba(124,58,237,0.2);color:#dcd2ff;}
+    footer {text-align:center;color:#aaa7c3;margin-top:30px;font-size:14px;}
+    .hidden{display:none;}
+    .contact a{color:#06b6d4;text-decoration:none;}
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../logo.png" alt="Logo JONI PES">
+    <h1>Mobile Legends: Bang Bang</h1>
+    <p>Config dan Akun Siap Pakai</p>
+  </header>
+
+  <div class="menu">
+    <a href="#" onclick="showSection('config')">CONFIG</a>
+    <a href="#" onclick="showSection('stok')">STOK AKUN</a>
+  </div>
+
+  <section id="config" class="hidden">
+    <h2>⚙️ Daftar Config MLBB</h2>
+    <table>
+      <tr><th>Nama Config</th><th>Jenis</th><th>Keterangan</th></tr>
+      <tr><td>Ultra Smooth</td><td>Grafik</td><td>FPS tinggi tanpa drop</td></tr>
+      <tr><td>Ping Booster</td><td>Network</td><td>Kurangi delay jaringan</td></tr>
+    </table>
+    <a href="#" class="btn-download">🔽 Download (MediaFire)</a>
+  </section>
+
+  <section id="stok" class="hidden">
+    <h2>💾 Stok Akun MLBB</h2>
+    <table>
+      <tr><th>Nama Akun</th><th>Rank / Tier</th><th>Harga</th></tr>
+      <tr><td>Legend Pack</td><td>Mythic</td><td>Rp 200.000</td></tr>
+      <tr><td>Beginner Pack</td><td>Epic</td><td>Rp 80.000</td></tr>
+    </table>
+    <h3>Pembayaran:</h3>
+    <p>DANA • OVO • GOPAY • BCA</p>
+  </section>
+
+  <footer>
+    <p><strong>Hubungi Bang Joni sebelum membeli:</strong></p>
+    📸 Instagram: <a href="https://instagram.com/jonipes">@jonipes</a><br>
+    💬 WhatsApp: <a href="https://wa.me/6281234567890">+62 812-3456-7890</a><br>
+    <br><a href="../index.html">⬅️ Kembali ke Beranda</a>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.getElementById("config").classList.add("hidden");
+      document.getElementById("stok").classList.add("hidden");
+      document.getElementById(id).classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
