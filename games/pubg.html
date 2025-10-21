@@ -1,71 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PUBG — JONI PES</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PUBG Mobile - JONI PES</title>
+  <link rel="icon" type="image/png" href="../logo.png" />
   <style>
-    body {margin:0;font-family:"Inter",sans-serif;background:linear-gradient(180deg,#12071f,#2d0a4a);color:#eaf2ff;text-align:center;padding:20px;}
-    header img {width:90px;border-radius:20px;box-shadow:0 0 15px #06b6d4;}
-    h1 {color:#06b6d4;}
-    .menu {display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:20px 0;}
-    .menu a {display:inline-block;padding:10px 22px;border-radius:10px;background:linear-gradient(90deg,#7c3aed,#06b6d4);color:#020617;font-weight:700;text-decoration:none;}
-    section {margin:28px auto;max-width:800px;text-align:left;background:rgba(255,255,255,0.05);border-radius:14px;padding:16px;box-shadow:0 0 12px rgba(6,182,212,0.2);}
-    table {width:100%;border-collapse:collapse;margin-top:10px;color:#eaf2ff;}
-    th,td {padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;font-size:14px;}
-    th {background:rgba(6,182,212,0.2);color:#d4faff;}
-    .btn-download {display:inline-block;margin-top:12px;background:linear-gradient(90deg,#7c3aed,#06b6d4);color:#020617;font-weight:700;padding:8px 14px;border-radius:8px;text-decoration:none;}
-    footer {text-align:center;color:#aaa7c3;margin-top:30px;font-size:14px;}
-    .hidden{display:none;}
-    .contact a{color:#06b6d4;text-decoration:none;}
+    body {
+      background: linear-gradient(180deg, #1a0028, #090014);
+      color: white;
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    img.logo {
+      width: 120px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px #7c3aed;
+      margin-top: 20px;
+    }
+
+    h1 { color: #7c3aed; margin-top: 10px; font-size: 28px; }
+
+    .btn {
+      background: linear-gradient(90deg, #9333ea, #3b82f6);
+      border: none;
+      color: white;
+      padding: 12px 25px;
+      margin: 10px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover { transform: scale(1.05); box-shadow: 0 0 20px #7c3aed; }
+
+    .table {
+      margin: 20px auto;
+      width: 90%;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .table th, .table td {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 10px;
+    }
+
+    .table th { background: rgba(124, 58, 237, 0.2); }
+
+    .pay a {
+      display: inline-block;
+      background: #7c3aed;
+      color: white;
+      padding: 10px 18px;
+      margin: 5px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .contact { margin-top: 30px; font-size: 14px; }
+
+    .back { display: block; margin-top: 30px; color: #7c3aed; text-decoration: none; }
   </style>
 </head>
 <body>
-  <header>
-    <img src="../logo.png" alt="Logo JONI PES">
-    <h1>PUBG</h1>
-    <p>Config dan Akun Siap Pakai</p>
-  </header>
+  <img src="logo-pubg.png" alt="PUBG" class="logo" />
+  <h1>PUBG Mobile</h1>
+  <p>Config dan Akun Siap Pakai</p>
 
-  <div class="menu">
-    <a href="#" onclick="showSection('config')">CONFIG</a>
-    <a href="#" onclick="showSection('stok')">STOK AKUN</a>
+  <button class="btn">CONFIG</button>
+  <button class="btn">STOK AKUN</button>
+
+  <h2>Daftar Config PUBG</h2>
+  <table class="table">
+    <tr><th>Nama Config</th><th>Jenis</th><th>Keterangan</th></tr>
+    <tr><td>Ultra Graphics</td><td>Visual</td><td>Grafis tinggi tanpa lag</td></tr>
+    <tr><td>Low Ping Fix</td><td>Network</td><td>Stabilkan koneksi server</td></tr>
+  </table>
+
+  <a href="#" class="btn">⬇️ Download (MediaFire)</a>
+
+  <div class="pay">
+    <h3>Pembayaran Langsung</h3>
+    <a href="#">DANA</a>
+    <a href="#">OVO</a>
+    <a href="#">GOPAY</a>
+    <a href="#">BCA</a>
   </div>
 
-  <section id="config" class="hidden">
-    <h2>⚙️ Daftar Config PUBG</h2>
-    <table>
-      <tr><th>Nama Config</th><th>Jenis</th><th>Keterangan</th></tr>
-      <tr><td>Ultra Graphics</td><td>Visual</td><td>Grafis tinggi tanpa lag</td></tr>
-      <tr><td>Low Ping Fix</td><td>Network</td><td>Stabilkan koneksi</td></tr>
-    </table>
-    <a href="#" class="btn-download">🔽 Download (MediaFire)</a>
-  </section>
+  <div class="contact">
+    <p>Hubungi Bang Joni sebelum membeli:</p>
+    <p>📸 Instagram: <a href="https://instagram.com/jonipes" style="color:#7c3aed;">@jonipes</a></p>
+    <p>💬 WhatsApp: <a href="https://wa.me/6281234567890" style="color:#7c3aed;">+62 812-3456-7890</a></p>
+  </div>
 
-  <section id="stok" class="hidden">
-    <h2>💾 Stok Akun PUBG</h2>
-    <table>
-      <tr><th>Nama Akun</th><th>Rank / Tier</th><th>Harga</th></tr>
-      <tr><td>Pro Player 1</td><td>Conqueror</td><td>Rp 250.000</td></tr>
-      <tr><td>Casual Pack</td><td>Crown</td><td>Rp 100.000</td></tr>
-    </table>
-    <h3>Pembayaran:</h3>
-    <p>DANA • OVO • GOPAY • BCA</p>
-  </section>
-
-  <footer>
-    <p><strong>Hubungi Bang Joni sebelum membeli:</strong></p>
-    📸 Instagram: <a href="https://instagram.com/jonipes">@jonipes</a><br>
-    💬 WhatsApp: <a href="https://wa.me/6281234567890">+62 812-3456-7890</a><br>
-    <br><a href="../index.html">⬅️ Kembali ke Beranda</a>
-  </footer>
-
-  <script>
-    function showSection(id) {
-      document.getElementById("config").classList.add("hidden");
-      document.getElementById("stok").classList.add("hidden");
-      document.getElementById(id).classList.remove("hidden");
-    }
-  </script>
+  <a href="../index.html" class="back">⬅️ Kembali ke Beranda</a>
 </body>
 </html>
