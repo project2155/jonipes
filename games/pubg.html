@@ -48,55 +48,77 @@
       display: flex; flex-wrap: wrap; justify-content: center;
       gap: 10px; margin-top: 10px;
     }
-    .footer { margin-top: 30px; font-size: 0.9em; color: #ccc; }
+    .footer {
+      margin-top: 30px; font-size: 0.9em; color: #ccc;
+    }
     .footer a { color: #7f00ff; text-decoration: none; }
   </style>
 </head>
 <body>
   <img src="./assets/logo/logo-pubg.png" alt="PUBG Logo">
   <h1>PUBG Mobile</h1>
-  <p>Config & Akun Siap Push Rank</p>
+  <p>Config dan Akun Siap Push Rank</p>
 
   <div>
     <button class="btn" onclick="showSection('config')">CONFIG</button>
     <button class="btn" onclick="showSection('stok')">STOK AKUN</button>
   </div>
 
-  <!-- CONFIG -->
+  <!-- CONFIG SECTION -->
   <div id="config" class="section">
     <h2>Daftar Config PUBG</h2>
     <table>
-      <tr><th>Nama Config</th><th>Jenis</th><th>Keterangan</th><th>Download</th></tr>
-      <tr><td>No Recoil Pro</td><td>Gameplay</td><td>Kendali tanpa recoil</td>
-        <td><a class="btn" href="#" target="_blank">Download</a></td></tr>
-      <tr><td>Ultra FPS Boost</td><td>Optimasi</td><td>FPS tinggi tanpa drop</td>
-        <td><a class="btn" href="#" target="_blank">Download</a></td></tr>
+      <tr>
+        <th>Nama Config</th><th>Jenis</th><th>Keterangan</th><th>Download</th>
+      </tr>
+      <tr>
+        <td>No Recoil Pro</td><td>Gameplay</td><td>Kendali senjata tanpa recoil</td>
+        <td><a class="btn" href="https://www.mediafire.com/" target="_blank">Download</a></td>
+      </tr>
+      <tr>
+        <td>Ultra FPS Boost</td><td>Optimasi</td><td>FPS stabil dan ringan</td>
+        <td><a class="btn" href="https://drive.google.com/" target="_blank">Download</a></td>
+      </tr>
+      <tr>
+        <td>Anti Lag</td><td>Network</td><td>Koneksi lebih stabil</td>
+        <td><a class="btn" href="https://mega.nz/" target="_blank">Download</a></td>
+      </tr>
     </table>
   </div>
 
-  <!-- STOK AKUN -->
+  <!-- STOK AKUN SECTION -->
   <div id="stok" class="section">
     <h2>Stok Akun PUBG</h2>
     <table>
-      <tr><th>Kode Akun</th><th>Tingkat</th><th>Harga</th><th>Lihat Akun</th></tr>
-      <tr><td>#PUBG001</td><td>ACE</td><td>Rp 300.000</td>
-        <td><a class="btn" href="pubg001.html" target="_blank">Lihat Akun</a></td></tr>
-      <tr><td>#PUBG002</td><td>Crown</td><td>Rp 150.000</td>
-        <td><a class="btn" href="pubg002.html" target="_blank">Lihat Akun</a></td></tr>
+      <tr>
+        <th>Kode Akun</th>
+        <th>Tier</th>
+        <th>Harga</th>
+        <th>Lihat Akun</th>
+      </tr>
+      <tr>
+        <td>#PUBG001</td><td>ACE</td><td>Rp 300.000</td>
+        <td><a class="btn" href="pubg001.html" target="_blank">Lihat Akun</a></td>
+      </tr>
+      <tr>
+        <td>#PUBG002</td><td>CROWN</td><td>Rp 200.000</td>
+        <td><a class="btn" href="pubg002.html" target="_blank">Lihat Akun</a></td>
+      </tr>
     </table>
 
     <h3>Pembayaran Langsung</h3>
     <div class="payment-buttons">
-      <a class="pay-btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni,%20bayar%20akun%20PUBG%20pakai%20DANA" target="_blank">DANA</a>
-      <a class="pay-btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni,%20bayar%20akun%20PUBG%20pakai%20OVO" target="_blank">OVO</a>
-      <a class="pay-btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni,%20bayar%20akun%20PUBG%20pakai%20GoPay" target="_blank">GoPay</a>
-      <a class="pay-btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni,%20bayar%20akun%20PUBG%20via%20BCA" target="_blank">BCA</a>
+      <a class="pay-btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni,%20saya%20bayar%20akun%20PUBG%20pakai%20DANA" target="_blank">DANA</a>
+      <a class="pay-btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni,%20saya%20bayar%20akun%20PUBG%20pakai%20OVO" target="_blank">OVO</a>
+      <a class="pay-btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni,%20saya%20bayar%20akun%20PUBG%20pakai%20GoPay" target="_blank">GoPay</a>
+      <a class="pay-btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni,%20saya%20bayar%20akun%20PUBG%20via%20BCA" target="_blank">BCA</a>
     </div>
   </div>
 
+  <!-- FOOTER -->
   <div class="footer">
     <p>Hubungi Bang Joni sebelum membeli:</p>
-    <p>Instagram: <a href="https://www.instagram.com/ancha_kurniawan" target="_blank">@jonipes</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/ancha_kurniawan?igsh=cTNkcXZ3NzRoODRy" target="_blank">@jonipes</a></p>
     <p>WhatsApp: <a href="https://wa.me/6289507676856">BangJoni</a></p>
     <a class="btn" href="../index.html">⬅ Kembali ke Beranda</a>
   </div>
