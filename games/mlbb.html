@@ -5,61 +5,121 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mobile Legends - JONI PES</title>
   <style>
-    body {font-family:'Poppins',sans-serif;background:linear-gradient(180deg,#20003d,#000);color:white;text-align:center;padding:20px;}
-    img{width:120px;border-radius:20px;box-shadow:0 0 25px #7f00ff;}
-    h1{color:#c084fc;margin-top:10px;}
-    .btn{background:linear-gradient(90deg,#7f00ff,#00b3ff);padding:12px 25px;border-radius:10px;text-decoration:none;color:white;margin:8px;display:inline-block;font-weight:bold;}
-    table{margin:20px auto;width:90%;border-collapse:collapse;border-radius:10px;overflow:hidden;}
-    th,td{border:1px solid #3a0ca3;padding:12px;}th{background:#3a0ca3;}tr:nth-child(even){background:#1a0033;}
-    .section{display:none;animation:fadeIn 0.4s ease-in;}@keyframes fadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
-    .payment-buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:10px;}
-    .pay-btn{background:linear-gradient(90deg,#7f00ff,#00b3ff);padding:12px 18px;border-radius:10px;color:white;font-weight:bold;text-decoration:none;}
-    .footer{margin-top:20px;font-size:0.9em;}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #20003d, #000);
+      color: white; text-align: center; padding: 20px;
+    }
+    img {
+      width: 120px; border-radius: 20px;
+      box-shadow: 0 0 25px #7f00ff;
+    }
+    h1 { color: #c084fc; margin-top: 10px; }
+    .btn {
+      background: linear-gradient(90deg, #7f00ff, #00b3ff);
+      padding: 12px 25px; border-radius: 10px; text-decoration: none;
+      color: white; margin: 8px; display: inline-block;
+      font-weight: bold; transition: 0.3s;
+    }
+    .btn:hover { opacity: 0.85; transform: scale(1.05); }
+    table {
+      margin: 20px auto; width: 95%; border-collapse: collapse;
+      border-radius: 10px; overflow: hidden;
+    }
+    th, td {
+      border: 1px solid #3a0ca3; padding: 12px; text-align: center;
+    }
+    th { background: #3a0ca3; }
+    tr:nth-child(even) { background: #1a0033; }
+    .section {
+      display: none; animation: fadeIn 0.4s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .pay-btn {
+      background: linear-gradient(90deg, #7f00ff, #00b3ff);
+      padding: 12px 18px; border-radius: 10px; color: white;
+      font-weight: bold; text-decoration: none; transition: 0.3s;
+    }
+    .pay-btn:hover { opacity: 0.8; transform: scale(1.05); }
+    .payment-buttons {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 10px; margin-top: 10px;
+    }
+    .footer {
+      margin-top: 30px; font-size: 0.9em; color: #ccc;
+    }
+    .footer a { color: #7f00ff; text-decoration: none; }
   </style>
 </head>
 <body>
   <img src="./assets/logo/logo-mlbb.png" alt="MLBB Logo">
   <h1>Mobile Legends: Bang Bang</h1>
-  <p>Config dan Akun Siap Pakai</p>
+  <p>Config dan Akun Siap Rank Up</p>
 
   <div>
     <button class="btn" onclick="showSection('config')">CONFIG</button>
     <button class="btn" onclick="showSection('stok')">STOK AKUN</button>
   </div>
 
+  <!-- CONFIG SECTION -->
   <div id="config" class="section">
     <h2>Daftar Config MLBB</h2>
     <table>
-      <tr><th>Nama Config</th><th>Jenis</th><th>Keterangan</th></tr>
-      <tr><td>No Lag Script</td><td>Optimasi</td><td>Hilangkan lag saat war</td></tr>
-      <tr><td>Smooth FPS</td><td>Visual</td><td>Grafis lebih halus dan ringan</td></tr>
-      <tr><td>Skin Unlocker</td><td>Visual</td><td>Pilih semua skin hero</td></tr>
+      <tr>
+        <th>Nama Config</th><th>Jenis</th><th>Keterangan</th><th>Download</th>
+      </tr>
+      <tr>
+        <td>No Lag Mode</td><td>Performance</td><td>Stabilkan FPS saat War</td>
+        <td><a class="btn" href="https://www.mediafire.com/" target="_blank">Download</a></td>
+      </tr>
+      <tr>
+        <td>Rank Booster</td><td>Optimasi</td><td>Bantu naik Rank lebih cepat</td>
+        <td><a class="btn" href="https://drive.google.com/" target="_blank">Download</a></td>
+      </tr>
+      <tr>
+        <td>Skin Unlocker</td><td>Visual</td><td>Tampilan skin gratis (non-cheat)</td>
+        <td><a class="btn" href="https://mega.nz/" target="_blank">Download</a></td>
+      </tr>
     </table>
-    <a class="btn" href="#">⬇️ Download (MediaFire)</a>
   </div>
 
+  <!-- STOK AKUN SECTION -->
   <div id="stok" class="section">
     <h2>Stok Akun MLBB</h2>
     <table>
-      <tr><th>Nama / Jenis Akun</th><th>Rank / Divisi</th><th>Harga</th></tr>
-      <tr><td>Akun Mythic</td><td>Mythic</td><td>Rp 250.000</td></tr>
-      <tr><td>Akun Epic</td><td>Epic</td><td>Rp 150.000</td></tr>
-      <tr><td>Akun Starter</td><td>Master</td><td>Rp 80.000</td></tr>
+      <tr>
+        <th>Kode Akun</th>
+        <th>Rank / Tier</th>
+        <th>Harga</th>
+        <th>Lihat Akun</th>
+      </tr>
+      <tr>
+        <td>#MLBB001</td><td>Mythical Glory</td><td>Rp 400.000</td>
+        <td><a class="btn" href="mlbb001.html" target="_blank">Lihat Akun</a></td>
+      </tr>
+      <tr>
+        <td>#MLBB002</td><td>Epic</td><td>Rp 150.000</td>
+        <td><a class="btn" href="mlbb002.html" target="_blank">Lihat Akun</a></td>
+      </tr>
     </table>
 
     <h3>Pembayaran Langsung</h3>
     <div class="payment-buttons">
-      <a class="pay-btn" href="https://wa.me/6289507673607?text=Halo%20Bang%20Joni%2C%20saya%20mau%20bayar%20pakai%20DANA%20untuk%20akun%20MLBB" target="_blank">💙 DANA</a>
-      <a class="pay-btn" href="https://wa.me/6289507673607?text=Halo%20Bang%20Joni%2C%20saya%20mau%20bayar%20pakai%20OVO%20untuk%20akun%20MLBB" target="_blank">💜 OVO</a>
-      <a class="pay-btn" href="https://wa.me/6289507673607?text=Halo%20Bang%20Joni%2C%20saya%20mau%20bayar%20pakai%20GoPay%20untuk%20akun%20MLBB" target="_blank">💚 GoPay</a>
-      <a class="pay-btn" href="https://wa.me/6289507673607?text=Halo%20Bang%20Joni%2C%20saya%20mau%20transfer%20lewat%20BCA%20untuk%20akun%20MLBB" target="_blank">🏦 BCA</a>
+      <a class="pay-btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni,%20bayar%20akun%20MLBB%20pakai%20DANA" target="_blank">DANA</a>
+      <a class="pay-btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni,%20bayar%20akun%20MLBB%20pakai%20OVO" target="_blank">OVO</a>
+      <a class="pay-btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni,%20bayar%20akun%20MLBB%20pakai%20GoPay" target="_blank">GoPay</a>
+      <a class="pay-btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni,%20bayar%20akun%20MLBB%20via%20BCA" target="_blank">BCA</a>
     </div>
   </div>
 
+  <!-- FOOTER -->
   <div class="footer">
     <p>Hubungi Bang Joni sebelum membeli:</p>
-    <p>📸 Instagram: <a href="https://www.instagram.com/ancha_kurniawan?igsh=cTNkcXZ3NzRoODRy">@jonipes</a></p>
-    <p>💬 WhatsApp: <a href="https://wa.me/6289507673607">BangJon</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/ancha_kurniawan?igsh=cTNkcXZ3NzRoODRy" target="_blank">@jonipes</a></p>
+    <p>WhatsApp: <a href="https://wa.me/6289507676856">BangJoni</a></p>
     <a class="btn" href="../index.html">⬅ Kembali ke Beranda</a>
   </div>
 
