@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akun MLBB #002 - Mythical Glory | JONI PES</title>
+  <style>
+    body { font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #20003d, #000);
+      color: white; text-align: center; padding: 20px; }
+    h1 { color: #c084fc; margin-bottom: 10px; }
+    p { color: #ccc; margin-bottom: 20px; }
+    .slider { position: relative; width: 90%; max-width: 400px;
+      margin: 20px auto; overflow: hidden; border-radius: 15px;
+      box-shadow: 0 0 25px #7f00ff; }
+    .slides { display: flex; transition: transform 0.5s ease; }
+    .slides img { width: 100%; border-radius: 15px; }
+    .buttons { display: flex; justify-content: center; gap: 15px; margin-top: 15px; }
+    .btn {
+      background: linear-gradient(90deg, #7f00ff, #00b3ff);
+      padding: 10px 18px; border-radius: 8px;
+      color: white; font-weight: bold;
+      text-decoration: none; transition: 0.3s;
+    }
+    .btn:hover { opacity: 0.85; transform: scale(1.05); }
+    footer { margin-top: 25px; font-size: 0.9rem; color: #aaa; }
+    footer a { color: #7f00ff; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h1>Akun MLBB #002 - Mythical Glory</h1>
+  <p>Akun MLBB dengan hero dan skin epic lengkap 💫</p>
+
+  <div class="slider">
+    <div class="slides" id="slides">
+      <img src="assets/preview/mlbb1-1.jpg" alt="MLBB Akun 1 Gambar 1">
+      <img src="assets/preview/mlbb1-2.jpg" alt="MLBB Akun 1 Gambar 2">
+      <img src="assets/preview/mlbb1-3.jpg" alt="MLBB Akun 1 Gambar 3">
+    </div>
+  </div>
+
+  <div class="buttons">
+    <button class="btn" onclick="prevSlide()">⬅ Sebelumnya</button>
+    <button class="btn" onclick="nextSlide()">Selanjutnya ➡</button>
+  </div>
+
+  <div style="margin-top: 25px;">
+    <a class="btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni,%20saya%20mau%20beli%20Akun%20MLBB%20Code%20%23001%20(Mythical%20Glory)" target="_blank">💬 Beli Sekarang</a>
+    <a class="btn" href="mlbb.html">⬅ Kembali</a>
+  </div>
+
+  <footer>
+    <p>Hubungi Bang Joni: <a href="https://wa.me/6289507676856" target="_blank">WhatsApp</a></p>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+
+    function showSlide(index) {
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    }
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(currentSlide);
+    }
+  </script>
+</body>
+</html>
