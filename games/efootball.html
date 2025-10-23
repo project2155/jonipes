@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Akun eFootball - JONI PES Marketplace</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eFootball Mobile - JONI PES</title>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f8f8ff;
+      background: #f9f9ff;
       margin: 0;
       padding: 0;
+      padding-bottom: 80px;
     }
 
     /* Header */
@@ -37,14 +38,14 @@
       justify-content: center;
       background: white;
       border-bottom: 1px solid #ddd;
-      padding: 8px 0;
     }
 
     .tabs a {
       text-decoration: none;
       color: #666;
       font-weight: 500;
-      padding: 8px 0;
+      padding: 10px 0;
+      margin: 0 16px;
       border-bottom: 2px solid transparent;
       transition: all 0.3s;
     }
@@ -52,7 +53,6 @@
     .tabs a.active {
       color: #0044ff;
       border-bottom: 2px solid #0044ff;
-      font-weight: 600;
     }
 
     /* Search bar */
@@ -72,18 +72,14 @@
       outline: none;
       font-size: 0.95em;
       color: #555;
-    }
-
-    .search-bar .icons {
-      display: flex;
-      gap: 10px;
+      background: none;
     }
 
     .search-bar button {
       border: none;
-      background: #eee;
-      border-radius: 8px;
-      padding: 6px 10px;
+      background: none;
+      font-size: 1.1em;
+      color: #555;
       cursor: pointer;
     }
 
@@ -92,7 +88,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 14px;
-      padding: 10px 16px 80px;
+      padding: 10px 16px;
     }
 
     .card {
@@ -155,7 +151,7 @@
       margin-top: 2px;
     }
 
-    /* Bottom Nav */
+    /* Bottom Nav - hanya home */
     .bottom-nav {
       position: fixed;
       bottom: 0;
@@ -163,30 +159,32 @@
       right: 0;
       background: #fff;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       border-top: 1px solid #ddd;
       padding: 8px 0;
+      z-index: 999;
     }
 
     .bottom-nav a {
       text-decoration: none;
-      color: #666;
-      font-size: 0.85em;
+      color: #0044ff;
+      font-weight: bold;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    .bottom-nav a.active {
-      color: #0044ff;
-      font-weight: bold;
+    .bottom-nav img {
+      width: 24px;
+      height: 24px;
+      margin-bottom: 4px;
     }
   </style>
 </head>
 <body>
   <!-- Header -->
   <header>
-    <img src="../logo-efootball.png" alt="Logo eFootball">
+    <img src="assets/logo/logo-efootball.png" alt="Logo eFootball">
     <span>eFootball Mobile - JONI PES</span>
   </header>
 
@@ -198,64 +196,62 @@
   <!-- Search -->
   <div class="search-bar">
     <input type="text" placeholder="Cari akun eFootball..." />
-    <div class="icons">
-      <button>⇅</button>
-      <button>⚙️</button>
-    </div>
+    <button>🔍</button>
   </div>
 
   <!-- Game Account Grid -->
   <div class="game-list">
-    <a href="#" class="card">
-      <img src="jonipes/games/efootball1.jpg" alt="Akun eFootball 1">
+    <a href="detail/akun1.html" class="card">
+      <img src="assets/img/efootball1.jpg" alt="Akun eFootball 1">
       <div class="card-body">
-        <h3>Akun #001 2 BLITZ CULLER DEL PIERO x </h3>
+        <h3>Akun #001 2 BLITZ CULLER DEL PIERO x</h3>
         <div class="price">Rp125.000</div>
         <div class="instant">🚀 Pengiriman Instan</div>
         <div class="tag">Anti Hackback</div>
-        <div class="sold">Stok Ready</div>
+        <div class="sold">Stok Ready (1)</div>
       </div>
     </a>
 
-    <a href="#" class="card">
-      <img src="jonipes/games/efootball2.jpg" alt="Akun eFootball 2">
+    <a href="detail/akun2.html" class="card">
+      <img src="assets/img/efootball2.jpg" alt="Akun eFootball 2">
       <div class="card-body">
         <h3>Akun #002 NEYMAR X SUAREZ (MSN)</h3>
         <div class="price">Rp95.000</div>
         <div class="instant">🚀 Pengiriman Instan</div>
         <div class="tag">Anti Hackback</div>
-        <div class="sold">Stok Ready</div>
+        <div class="sold">Stok Ready (3)</div>
       </div>
     </a>
 
-    <a href="#" class="card">
-      <img src="jonipes/games/efootball3.jpg" alt="Akun eFootball 3">
+    <a href="detail/akun3.html" class="card">
+      <img src="assets/img/efootball3.jpg" alt="Akun eFootball 3">
       <div class="card-body">
         <h3>Akun #003 CR7 BIGTIME TER OP</h3>
         <div class="price">Rp50.000</div>
         <div class="instant">🚀 Pengiriman Instan</div>
         <div class="tag">Anti Hackback</div>
-        <div class="sold">Stok Ready</div>
+        <div class="sold">Stok Ready (2)</div>
       </div>
     </a>
 
-    <a href="#" class="card">
-      <img src="jonipes/games/efootball4.jpg" alt="Akun eFootball 4">
+    <a href="detail/akun4.html" class="card">
+      <img src="assets/img/efootball4.jpg" alt="Akun eFootball 4">
       <div class="card-body">
-        <h3>Akun #004 SEMI SULTAN </h3>
+        <h3>Akun #004 SEMI SULTAN</h3>
         <div class="price">Rp75.000</div>
         <div class="instant">🚀 Pengiriman Instan</div>
         <div class="tag">Anti Hackback</div>
-        <div class="sold">Stok Ready</div>
+        <div class="sold">Stok Ready (5)</div>
       </div>
     </a>
   </div>
 
   <!-- Bottom Navigation -->
   <nav class="bottom-nav">
-    <a href="../index.html">Home</a>
-    <a href="../akun.html" class="active">Akun</a>
-    <a href="#">Transaksi</a>
+    <a href="../index.html">
+      <img src="assets/icon/home.png" alt="Home">
+      <p>Home</p>
+    </a>
   </nav>
 </body>
 </html>
