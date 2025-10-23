@@ -5,103 +5,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kategori Akun - JONI PES</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {margin:0; padding:0; box-sizing:border-box;}
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom, #f9fbff, #e6eaff);
-      color: #222;
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(to bottom,#f5f6ff,#eaeaff);
+      color:#222;
+      min-height:100vh;
+      padding-bottom:80px;
     }
 
     /* Header */
     header {
-      background: white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      padding: 12px 15px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      background:white;
+      box-shadow:0 2px 8px rgba(0,0,0,0.08);
+      padding:12px 18px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      position:sticky;
+      top:0;
+      z-index:100;
     }
     header img {
-      width: 38px;
-      border-radius: 8px;
+      width:40px;
+      border-radius:8px;
     }
-    header a {
-      text-decoration: none;
-      color: #7f00ff;
-      font-size: 1.2rem;
+    header h1 {
+      font-size:1.1rem;
+      color:#7f00ff;
+      font-weight:600;
     }
 
-    /* Search Bar */
+    /* Search bar */
     .search-bar {
-      padding: 15px;
-      background: white;
-      border-bottom: 1px solid #ddd;
+      background:white;
+      padding:12px 15px;
+      border-bottom:1px solid #ddd;
     }
     .search-bar input {
-      width: 100%;
-      padding: 10px 12px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      font-size: 0.9rem;
-      outline: none;
+      width:100%;
+      padding:10px 14px;
+      border:1px solid #ccc;
+      border-radius:10px;
+      font-size:0.9rem;
+      outline:none;
     }
 
-    /* Section Titles */
+    /* Section Title */
     h2 {
-      margin: 18px 15px 10px;
-      font-size: 1.1rem;
-      color: #3a0ca3;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    h2 span {
-      font-size: 1.2rem;
+      margin:18px 15px 10px;
+      font-size:1.1rem;
+      color:#3a0ca3;
+      display:flex;
+      align-items:center;
+      gap:6px;
     }
 
-    /* Game Grid */
+    /* Grid game */
     .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      padding: 0 15px 30px;
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:15px;
+      padding:0 15px;
     }
-
     .game {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      text-align: center;
-      padding: 12px 8px;
-      transition: 0.3s;
-      cursor: pointer;
-      text-decoration: none;
-      color: #222;
+      background:white;
+      border-radius:15px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.05);
+      text-align:center;
+      padding:12px 8px;
+      transition:0.3s;
+      cursor:pointer;
+      text-decoration:none;
+      color:#222;
     }
     .game:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(127,0,255,0.3);
+      transform:scale(1.05);
+      box-shadow:0 0 15px rgba(127,0,255,0.3);
     }
     .game img {
-      width: 85px; height: 85px;
-      border-radius: 14px;
-      margin-bottom: 8px;
-      object-fit: cover;
+      width:80px;
+      height:80px;
+      border-radius:14px;
+      margin-bottom:8px;
+      object-fit:cover;
     }
     .game p {
-      font-size: 0.85rem;
-      font-weight: 500;
+      font-size:0.85rem;
+      font-weight:500;
+    }
+
+    /* Footer Navbar */
+    .navbar {
+      position:fixed;
+      bottom:0;
+      left:0;
+      width:100%;
+      background:white;
+      box-shadow:0 -2px 8px rgba(0,0,0,0.1);
+      display:flex;
+      justify-content:space-around;
+      align-items:center;
+      padding:8px 0;
+    }
+    .nav-item {
+      text-align:center;
+      font-size:0.8rem;
+      color:#777;
+      text-decoration:none;
+      transition:0.2s;
+    }
+    .nav-item img {
+      width:24px;
+      height:24px;
+      display:block;
+      margin:0 auto 4px;
+    }
+    .nav-item.active {
+      color:#7f00ff;
+      font-weight:600;
     }
 
     footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: #777;
-      padding: 20px 0;
+      text-align:center;
+      font-size:0.8rem;
+      color:#777;
+      margin-top:20px;
     }
   </style>
 </head>
@@ -109,9 +138,8 @@
 
   <!-- HEADER -->
   <header>
-    <a href="../index.html">⬅</a>
-    <img src="../games/assets/logo/20251021_190434.png" alt="JONI PES">
-    <span>Kategori Akun</span>
+    <a href="index.html"><img src="games/assets/logo/20251021_190434.png" alt="JONI PES"></a>
+    <h1>Kategori Akun</h1>
   </header>
 
   <!-- SEARCH -->
@@ -121,35 +149,50 @@
 
   <!-- POPULER -->
   <h2>🏆 Kategori Populer</h2>
-  <div class="grid" id="populer">
-    <a href="../games/efootball.html" class="game">
-      <img src="../games/assets/logo/logo-efootball.png" alt="eFootball">
+  <div class="grid" id="gridGames">
+    <a href="games/efootball.html" class="game">
+      <img src="games/assets/logo/logo-efootball.png" alt="eFootball">
       <p>eFootball Mobile</p>
     </a>
-    <a href="../games/mlbb.html" class="game">
-      <img src="../games/assets/logo/logo-mlbb.png" alt="MLBB">
+    <a href="games/mlbb.html" class="game">
+      <img src="games/assets/logo/logo-mlbb.png" alt="MLBB">
       <p>Mobile Legends</p>
     </a>
-  </div>
-
-  <!-- BARU -->
-  <h2>🆕 Kategori Baru</h2>
-  <div class="grid">
-    <a href="../games/pubg.html" class="game">
-      <img src="../games/assets/logo/logo-pubg.png" alt="PUBG">
+    <a href="games/pubg.html" class="game">
+      <img src="games/assets/logo/logo-pubg.png" alt="PUBG">
       <p>PUBG Mobile</p>
     </a>
-    <a href="../games/freefire.html" class="game">
-      <img src="../games/assets/logo/logo-ff.png" alt="Free Fire">
+    <a href="games/freefire.html" class="game">
+      <img src="games/assets/logo/logo-ff.png" alt="Free Fire">
       <p>Free Fire</p>
     </a>
   </div>
 
-  <!-- FOOTER -->
   <footer>
-    © 2025 JONI PES — Semua hak cipta dilindungi
+    © 2025 JONI PES — Semua Hak Cipta Dilindungi
   </footer>
 
+  <!-- NAVBAR BAWAH -->
+  <div class="navbar">
+    <a href="index.html" class="nav-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Home">
+      Home
+    </a>
+    <a href="#" class="nav-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="Transaksi">
+      Transaksi
+    </a>
+    <a href="#" class="nav-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/535/535234.png" alt="Favorit">
+      Favorit
+    </a>
+    <a href="akun.html" class="nav-item active">
+      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Akun">
+      Akun
+    </a>
+  </div>
+
+  <!-- SCRIPT -->
   <script>
     function filterGames() {
       const input = document.getElementById('searchInput').value.toLowerCase();
