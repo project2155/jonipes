@@ -10,8 +10,10 @@
       background-color: #f8f8ff;
       margin: 0;
       padding: 0;
+      padding-bottom: 80px; /* ✅ agar bisa di-scroll */
     }
 
+    /* Header */
     header {
       background: linear-gradient(90deg, #0044ff, #00bfff);
       color: white;
@@ -30,6 +32,7 @@
       margin-right: 10px;
     }
 
+    /* Search bar */
     .search-bar {
       background: white;
       margin: 12px;
@@ -48,6 +51,7 @@
       color: #555;
     }
 
+    /* Section */
     section {
       padding: 10px 16px;
     }
@@ -102,6 +106,7 @@
       margin: 0;
     }
 
+    /* Bottom Navigation */
     .bottom-nav {
       position: fixed;
       bottom: 0;
@@ -113,6 +118,7 @@
       border-top: 1px solid #ddd;
       padding: 8px 0;
       box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+      z-index: 999;
     }
 
     .bottom-nav a {
@@ -192,9 +198,14 @@
 
   <!-- Bottom Navigation -->
   <nav class="bottom-nav">
-    <a href="index.html">Home</a>
-    <a href="#" class="active">Transaksi</a>
-    <a href="#">Favorit</a>
+    <a href="index.html">
+      <img src="games/assets/icon/home.png" alt="Home" style="width:24px;height:24px;">
+      <p>Home</p>
+    </a>
+    <a href="#" class="active">
+      <img src="games/assets/icon/cart.png" alt="Daftar Game" style="width:24px;height:24px;">
+      <p>Daftar Game</p>
+    </a>
   </nav>
 </body>
 </html>
