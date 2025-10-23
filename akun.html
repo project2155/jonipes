@@ -8,16 +8,15 @@
     * {margin:0; padding:0; box-sizing:border-box;}
     body {
       font-family:'Poppins',sans-serif;
-      background:linear-gradient(to bottom,#f5f6ff,#eaeaff);
+      background:#f9f9ff;
       color:#222;
-      min-height:100vh;
-      padding-bottom:80px;
+      padding-bottom:90px;
     }
 
     /* Header */
     header {
       background:white;
-      box-shadow:0 2px 8px rgba(0,0,0,0.08);
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
       padding:12px 18px;
       display:flex;
       align-items:center;
@@ -32,8 +31,32 @@
     }
     header h1 {
       font-size:1.1rem;
-      color:#7f00ff;
       font-weight:600;
+      color:#7f00ff;
+    }
+
+    /* Top Tabs */
+    .tabs {
+      display:flex;
+      justify-content:space-around;
+      align-items:center;
+      background:white;
+      padding:10px 0;
+      box-shadow:0 2px 8px rgba(0,0,0,0.05);
+    }
+    .tabs button {
+      background:none;
+      border:none;
+      font-size:0.9rem;
+      color:#666;
+      font-weight:500;
+      cursor:pointer;
+      transition:0.3s;
+    }
+    .tabs button.active {
+      color:#7f00ff;
+      border-bottom:2px solid #7f00ff;
+      padding-bottom:4px;
     }
 
     /* Search bar */
@@ -51,22 +74,22 @@
       outline:none;
     }
 
-    /* Section Title */
+    /* Section Titles */
     h2 {
       margin:18px 15px 10px;
-      font-size:1.1rem;
+      font-size:1rem;
       color:#3a0ca3;
       display:flex;
       align-items:center;
       gap:6px;
     }
 
-    /* Grid game */
+    /* Grid Layout */
     .grid {
       display:grid;
       grid-template-columns:repeat(2,1fr);
       gap:15px;
-      padding:0 15px;
+      padding:0 15px 20px;
     }
     .game {
       background:white;
@@ -74,52 +97,51 @@
       box-shadow:0 2px 8px rgba(0,0,0,0.05);
       text-align:center;
       padding:12px 8px;
-      transition:0.3s;
-      cursor:pointer;
       text-decoration:none;
       color:#222;
+      transition:0.25s;
     }
     .game:hover {
-      transform:scale(1.05);
-      box-shadow:0 0 15px rgba(127,0,255,0.3);
+      transform:scale(1.04);
+      box-shadow:0 0 15px rgba(127,0,255,0.2);
     }
     .game img {
-      width:80px;
-      height:80px;
+      width:85px;
+      height:85px;
       border-radius:14px;
       margin-bottom:8px;
       object-fit:cover;
     }
     .game p {
-      font-size:0.85rem;
+      font-size:0.9rem;
       font-weight:500;
     }
 
-    /* Footer Navbar */
+    /* Navbar bawah */
     .navbar {
       position:fixed;
       bottom:0;
       left:0;
       width:100%;
       background:white;
-      box-shadow:0 -2px 8px rgba(0,0,0,0.1);
       display:flex;
       justify-content:space-around;
       align-items:center;
+      box-shadow:0 -2px 8px rgba(0,0,0,0.1);
       padding:8px 0;
+      z-index:100;
     }
     .nav-item {
       text-align:center;
       font-size:0.8rem;
       color:#777;
       text-decoration:none;
-      transition:0.2s;
+      transition:0.3s;
     }
     .nav-item img {
-      width:24px;
-      height:24px;
-      display:block;
-      margin:0 auto 4px;
+      width:22px;
+      height:22px;
+      margin-bottom:4px;
     }
     .nav-item.active {
       color:#7f00ff;
@@ -130,24 +152,32 @@
       text-align:center;
       font-size:0.8rem;
       color:#777;
-      margin-top:20px;
+      padding:20px;
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- Header -->
   <header>
-    <a href="index.html"><img src="games/assets/logo/20251021_190434.png" alt="JONI PES"></a>
-    <h1>Kategori Akun</h1>
+    <img src="games/assets/logo/20251021_190434.png" alt="JONI PES">
+    <h1>JONI PES Marketplace</h1>
   </header>
 
-  <!-- SEARCH -->
-  <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="Cari Nama Game..." onkeyup="filterGames()">
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="active" onclick="switchTab('akun')">Akun</button>
+    <button onclick="alert('Voucher coming soon 🔧')">Voucher</button>
+    <button onclick="alert('Koin Game coming soon 🔧')">Koin Game</button>
+    <button onclick="alert('Item coming soon 🔧')">Item</button>
   </div>
 
-  <!-- POPULER -->
+  <!-- Search -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Cari nama game..." onkeyup="filterGames()">
+  </div>
+
+  <!-- Kategori Populer -->
   <h2>🏆 Kategori Populer</h2>
   <div class="grid" id="gridGames">
     <a href="games/efootball.html" class="game">
@@ -155,7 +185,7 @@
       <p>eFootball Mobile</p>
     </a>
     <a href="games/mlbb.html" class="game">
-      <img src="games/assets/logo/logo-mlbb.png" alt="MLBB">
+      <img src="games/assets/logo/logo-mlbb.png" alt="Mobile Legends">
       <p>Mobile Legends</p>
     </a>
     <a href="games/pubg.html" class="game">
@@ -168,11 +198,22 @@
     </a>
   </div>
 
-  <footer>
-    © 2025 JONI PES — Semua Hak Cipta Dilindungi
-  </footer>
+  <!-- Kategori Baru -->
+  <h2>🆕 Kategori Baru</h2>
+  <div class="grid">
+    <a href="games/mlbb.html" class="game">
+      <img src="games/assets/logo/logo-mlbb.png" alt="MLBB">
+      <p>MLBB Config Update</p>
+    </a>
+    <a href="games/efootball.html" class="game">
+      <img src="games/assets/logo/logo-efootball.png" alt="eFootball">
+      <p>eFootball Boosted</p>
+    </a>
+  </div>
 
-  <!-- NAVBAR BAWAH -->
+  <footer>© 2025 JONI PES - Amanah & Responsif</footer>
+
+  <!-- Navbar -->
   <div class="navbar">
     <a href="index.html" class="nav-item">
       <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Home">
@@ -192,8 +233,11 @@
     </a>
   </div>
 
-  <!-- SCRIPT -->
   <script>
+    function switchTab(tab) {
+      if (tab === 'akun') return;
+      alert(`Fitur ${tab} akan segera hadir 🔧`);
+    }
     function filterGames() {
       const input = document.getElementById('searchInput').value.toLowerCase();
       const games = document.querySelectorAll('.game p');
@@ -203,6 +247,5 @@
       });
     }
   </script>
-
 </body>
 </html>
