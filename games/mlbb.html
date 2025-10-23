@@ -1,134 +1,221 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mobile Legends - JONI PES</title>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(180deg, #20003d, #000);
-      color: white; text-align: center; padding: 20px;
+      background: #f9f9ff;
+      margin: 0;
+      padding: 0;
+      padding-bottom: 80px;
     }
-    img {
-      width: 120px; border-radius: 20px;
-      box-shadow: 0 0 25px #7f00ff;
+
+    /* Header */
+    header {
+      background: linear-gradient(90deg, #007bff, #00c8ff);
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 10px 16px;
+      font-weight: bold;
+      font-size: 1.1em;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
-    h1 { color: #c084fc; margin-top: 10px; }
-    .btn {
-      background: linear-gradient(90deg, #7f00ff, #00b3ff);
-      padding: 12px 25px; border-radius: 10px; text-decoration: none;
-      color: white; margin: 8px; display: inline-block;
-      font-weight: bold; transition: 0.3s;
+
+    header img {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      margin-right: 10px;
     }
-    .btn:hover { opacity: 0.85; transform: scale(1.05); }
-    table {
-      margin: 20px auto; width: 95%; border-collapse: collapse;
-      border-radius: 10px; overflow: hidden;
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      background: white;
+      border-bottom: 1px solid #ddd;
     }
-    th, td {
-      border: 1px solid #3a0ca3; padding: 12px; text-align: center;
+
+    .tabs a {
+      text-decoration: none;
+      color: #666;
+      font-weight: 500;
+      padding: 10px 0;
+      margin: 0 16px;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s;
     }
-    th { background: #3a0ca3; }
-    tr:nth-child(even) { background: #1a0033; }
-    .section {
-      display: none; animation: fadeIn 0.4s ease-in;
+
+    .tabs a.active {
+      color: #007bff;
+      border-bottom: 2px solid #007bff;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px);}
-      to { opacity: 1; transform: translateY(0);}
+
+    /* Search bar */
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background: white;
+      margin: 12px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
-    .pay-btn {
-      background: linear-gradient(90deg, #7f00ff, #00b3ff);
-      padding: 12px 18px; border-radius: 10px; color: white;
-      font-weight: bold; text-decoration: none; transition: 0.3s;
+
+    .search-bar input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 0.95em;
+      color: #555;
     }
-    .pay-btn:hover { opacity: 0.8; transform: scale(1.05); }
-    .payment-buttons {
-      display: flex; flex-wrap: wrap; justify-content: center;
-      gap: 10px; margin-top: 10px;
+
+    .search-bar button {
+      border: none;
+      background: #eee;
+      border-radius: 8px;
+      padding: 6px 10px;
+      cursor: pointer;
     }
-    .footer {
-      margin-top: 30px; font-size: 0.9em; color: #ccc;
+
+    /* Card Grid */
+    .game-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      padding: 10px 16px;
     }
-    .footer a { color: #7f00ff; text-decoration: none; }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 8px 10px;
+    }
+
+    .card-body h3 {
+      font-size: 0.9em;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 4px;
+    }
+
+    .price {
+      color: #ff6600;
+      font-weight: bold;
+      font-size: 0.95em;
+      margin-bottom: 6px;
+    }
+
+    .instant {
+      font-size: 0.75em;
+      color: #00b341;
+      font-weight: 500;
+    }
+
+    .tag {
+      background: #e0e7ff;
+      color: #0044ff;
+      font-size: 0.7em;
+      padding: 2px 6px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+    .sold {
+      font-size: 0.75em;
+      color: #777;
+      margin-top: 2px;
+    }
+
+    /* Bottom Nav */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      display: flex;
+      justify-content: space-around;
+      border-top: 1px solid #ddd;
+      padding: 8px 0;
+      z-index: 999;
+    }
+
+    .bottom-nav a {
+      text-decoration: none;
+      color: #666;
+      font-size: 0.85em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .bottom-nav a.active {
+      color: #0044ff;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
-  <img src="./assets/logo/logo-mlbb.png" alt="MLBB Logo">
-  <h1>Mobile Legends: Bang Bang</h1>
-  <p>Config dan Akun Siap Rank Up</p>
+  <!-- Header -->
+  <header>
+    <img src="assets/logo/logo-mlbb.png" alt="Logo MLBB">
+    <span>Mobile Legends - JONI PES</span>
+  </header>
 
-  <div>
-    <button class="btn" onclick="showSection('config')">CONFIG</button>
-    <button class="btn" onclick="showSection('stok')">STOK AKUN</button>
+  <!-- Tabs -->
+  <div class="tabs">
+    <a href="#" class="active">Akun</a>
   </div>
 
-  <!-- CONFIG SECTION -->
-  <div id="config" class="section">
-    <h2>Daftar Config MLBB (BRLUM READY)</h2>
-    <table>
-      <tr>
-        <th>Nama Config</th><th>Jenis</th><th>Keterangan</th><th>Download</th>
-      </tr>
-      <tr>
-        <td>-</td><td>-</td><td>-</td>
-        <td><a class="btn" href="https://www.mediafire.com/" target="_blank">Download</a></td>
-      </tr>
-      <tr>
-        <td>-</td><td>-</td><td>-</td>
-        <td><a class="btn" href="https://drive.google.com/" target="_blank">Download</a></td>
-      </tr>
-      <tr>
-        <td>-</td><td>-</td><td>-</td>
-        <td><a class="btn" href="https://mega.nz/" target="_blank">Download</a></td>
-      </tr>
-    </table>
+  <!-- Search -->
+  <div class="search-bar">
+    <input type="text" placeholder="Cari akun MLBB..." />
+    <button>⇅</button>
+    <button>⚙️</button>
   </div>
 
-  <!-- STOK AKUN SECTION -->
-  <div id="stok" class="section">
-    <h2>Stok Akun MLBB (BELUM READY</h2>
-    <table>
-      <tr>
-        <th>Kode Akun</th>
-        <th>Rank / Tier</th>
-        <th>Harga</th>
-        <th>Lihat Akun</th>
-      </tr>
-      <tr>
-        <td>#MLBB001</td><td>-</td><td>Rp -</td>
-        <td><a class="btn" href="mlbb001.html" target="_blank">Lihat Akun</a></td>
-      </tr>
-      <tr>
-        <td>#MLBB002</td><td>-</td><td>Rp -</td>
-        <td><a class="btn" href="mlbb002.html" target="_blank">Lihat Akun</a></td>
-      </tr>
-    </table>
-
-    <h3>Pembayaran Langsung</h3>
-    <div class="payment-buttons">
-      <a class="pay-btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni,%20bayar%20akun%20MLBB%20pakai%20DANA" target="_blank">DANA</a>
-      <a class="pay-btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni,%20bayar%20akun%20MLBB%20pakai%20OVO" target="_blank">OVO</a>
-      <a class="pay-btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni,%20bayar%20akun%20MLBB%20pakai%20GoPay" target="_blank">GoPay</a>
-      <a class="pay-btn" href="https://wa.me/6289507676856?text=Halo%20Bang%20Joni,%20bayar%20akun%20MLBB%20via%20BCA" target="_blank">BCA</a>
-    </div>
+  <!-- Game Account Grid -->
+  <div class="game-list">
+    <a href="#" class="card">
+      <img src="assets/img/mlbb1.jpg" alt="Akun MLBB 1">
+      <div class="card-body">
+        <h3>Akun #001 Epic Skin Collection + Recall Tazz Tazz</h3>
+        <div class="price">Rp120.000</div>
+        <div class="instant">🚀 Pengiriman Instan</div>
+        <div class="tag">Anti Hackback</div>
+        <div class="sold">Stok Ready</div>
+    </a>
   </div>
 
-  <!-- FOOTER -->
-  <div class="footer">
-    <p>Hubungi Bang Joni sebelum membeli:</p>
-    <p>Instagram: <a href="https://www.instagram.com/ancha_kurniawan?igsh=cTNkcXZ3NzRoODRy" target="_blank">@jonipes</a></p>
-    <p>WhatsApp: <a href="https://wa.me/6289507676856">BangJoni</a></p>
-    <a class="btn" href="../index.html">⬅ Kembali ke Beranda</a>
-  </div>
-
-  <script>
-    function showSection(id) {
-      document.getElementById('config').style.display = 'none';
-      document.getElementById('stok').style.display = 'none';
-      document.getElementById(id).style.display = 'block';
-    }
-  </script>
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="../index.html">Home</a>
+    <a href="../akun.html" class="active">Akun</a>
+    <a href="#">Daftar Game</a>
+  </nav>
 </body>
 </html>
