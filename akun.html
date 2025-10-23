@@ -1,251 +1,202 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kategori Akun - JONI PES</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JONI PES Marketplace</title>
   <style>
-    * {margin:0; padding:0; box-sizing:border-box;}
     body {
-      font-family:'Poppins',sans-serif;
-      background:#f9f9ff;
-      color:#222;
-      padding-bottom:90px;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f8ff;
+      margin: 0;
+      padding: 0;
     }
 
     /* Header */
     header {
-      background:white;
-      box-shadow:0 2px 8px rgba(0,0,0,0.1);
-      padding:12px 18px;
-      display:flex;
-      align-items:center;
-      gap:10px;
-      position:sticky;
-      top:0;
-      z-index:100;
-    }
-    header img {
-      width:40px;
-      border-radius:8px;
-    }
-    header h1 {
-      font-size:1.1rem;
-      font-weight:600;
-      color:#7f00ff;
+      background: linear-gradient(90deg, #0044ff, #00bfff);
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 10px 16px;
+      font-weight: bold;
+      font-size: 1.1em;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
 
-    /* Top Tabs */
-    .tabs {
-      display:flex;
-      justify-content:space-around;
-      align-items:center;
-      background:white;
-      padding:10px 0;
-      box-shadow:0 2px 8px rgba(0,0,0,0.05);
-    }
-    .tabs button {
-      background:none;
-      border:none;
-      font-size:0.9rem;
-      color:#666;
-      font-weight:500;
-      cursor:pointer;
-      transition:0.3s;
-    }
-    .tabs button.active {
-      color:#7f00ff;
-      border-bottom:2px solid #7f00ff;
-      padding-bottom:4px;
+    header img {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      margin-right: 10px;
     }
 
     /* Search bar */
     .search-bar {
-      background:white;
-      padding:12px 15px;
-      border-bottom:1px solid #ddd;
+      background: white;
+      margin: 12px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
+
     .search-bar input {
-      width:100%;
-      padding:10px 14px;
-      border:1px solid #ccc;
-      border-radius:10px;
-      font-size:0.9rem;
-      outline:none;
+      border: none;
+      outline: none;
+      width: 100%;
+      font-size: 0.95em;
+      color: #555;
     }
 
-    /* Section Titles */
-    h2 {
-      margin:18px 15px 10px;
-      font-size:1rem;
-      color:#3a0ca3;
-      display:flex;
-      align-items:center;
-      gap:6px;
+    /* Kategori Section */
+    section {
+      padding: 10px 16px;
     }
 
-    /* Grid Layout */
-    .grid {
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:15px;
-      padding:0 15px 20px;
-    }
-    .game {
-      background:white;
-      border-radius:15px;
-      box-shadow:0 2px 8px rgba(0,0,0,0.05);
-      text-align:center;
-      padding:12px 8px;
-      text-decoration:none;
-      color:#222;
-      transition:0.25s;
-    }
-    .game:hover {
-      transform:scale(1.04);
-      box-shadow:0 0 15px rgba(127,0,255,0.2);
-    }
-    .game img {
-      width:85px;
-      height:85px;
-      border-radius:14px;
-      margin-bottom:8px;
-      object-fit:cover;
-    }
-    .game p {
-      font-size:0.9rem;
-      font-weight:500;
+    section h2 {
+      font-size: 1.1em;
+      color: #3a0ca3;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
     }
 
-    /* Navbar bawah */
-    .navbar {
-      position:fixed;
-      bottom:0;
-      left:0;
-      width:100%;
-      background:white;
-      display:flex;
-      justify-content:space-around;
-      align-items:center;
-      box-shadow:0 -2px 8px rgba(0,0,0,0.1);
-      padding:8px 0;
-      z-index:100;
-    }
-    .nav-item {
-      text-align:center;
-      font-size:0.8rem;
-      color:#777;
-      text-decoration:none;
-      transition:0.3s;
-    }
-    .nav-item img {
-      width:22px;
-      height:22px;
-      margin-bottom:4px;
-    }
-    .nav-item.active {
-      color:#7f00ff;
-      font-weight:600;
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
     }
 
-    footer {
-      text-align:center;
-      font-size:0.8rem;
-      color:#777;
-      padding:20px;
+    .game-card {
+      background: white;
+      border-radius: 12px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .game-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .game-card img {
+      width: 90px;
+      height: 90px;
+      border-radius: 15px;
+      object-fit: cover;
+      margin-bottom: 8px;
+    }
+
+    .game-card h3 {
+      font-size: 0.95em;
+      color: #111;
+      margin: 4px 0 2px;
+    }
+
+    .game-card p {
+      font-size: 0.8em;
+      color: #666;
+      margin: 0;
+    }
+
+    /* Bottom Navigation */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      display: flex;
+      justify-content: space-around;
+      border-top: 1px solid #ddd;
+      padding: 8px 0;
+      box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .bottom-nav a {
+      text-decoration: none;
+      color: #666;
+      font-size: 0.85em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: color 0.3s;
+    }
+
+    .bottom-nav a.active {
+      color: #0044ff;
+      font-weight: bold;
+    }
+
+    .bottom-nav a:hover {
+      color: #0044ff;
     }
   </style>
 </head>
 <body>
-
   <!-- Header -->
   <header>
-    <img src="games/assets/logo/20251021_190434.png" alt="JONI PES">
-    <h1>JONI PES Marketplace</h1>
+    <img src="./logo.png" alt="Logo JONI PES">
+    <span>JONI PES Marketplace</span>
   </header>
-
-  <!-- Tabs -->
-  <div class="tabs">
-    <button class="active" onclick="switchTab('akun')">Akun</button>
-    <button onclick="alert('Voucher coming soon 🔧')">Voucher</button>
-    <button onclick="alert('Koin Game coming soon 🔧')">Koin Game</button>
-    <button onclick="alert('Item coming soon 🔧')">Item</button>
-  </div>
 
   <!-- Search -->
   <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="Cari nama game..." onkeyup="filterGames()">
+    <input type="text" placeholder="Cari nama game..." />
   </div>
 
-  <!-- Kategori Populer -->
-  <h2>🏆 Kategori Populer</h2>
-  <div class="grid" id="gridGames">
-    <a href="games/efootball.html" class="game">
-      <img src="games/assets/logo/logo-efootball.png" alt="eFootball">
-      <p>eFootball Mobile</p>
-    </a>
-    <a href="games/mlbb.html" class="game">
-      <img src="games/assets/logo/logo-mlbb.png" alt="Mobile Legends">
-      <p>Mobile Legends</p>
-    </a>
-    <a href="games/pubg.html" class="game">
-      <img src="games/assets/logo/logo-pubg.png" alt="PUBG">
-      <p>PUBG Mobile</p>
-    </a>
-    <a href="games/freefire.html" class="game">
-      <img src="games/assets/logo/logo-ff.png" alt="Free Fire">
-      <p>Free Fire</p>
-    </a>
-  </div>
+  <!-- Game Sections -->
+  <section>
+    <h2>🔥 Kategori Populer</h2>
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="./logo-efootball.png" alt="eFootball Mobile">
+        <h3>eFootball Mobile</h3>
+        <p>Config & akun siap pakai</p>
+      </div>
+      <div class="game-card">
+        <img src="./logo-mlbb.png" alt="Mobile Legends">
+        <h3>Mobile Legends</h3>
+        <p>Hero build & akun</p>
+      </div>
+      <div class="game-card">
+        <img src="./logo-pubg.png" alt="PUBG Mobile">
+        <h3>PUBG Mobile</h3>
+        <p>Optimasi & stok akun</p>
+      </div>
+      <div class="game-card">
+        <img src="./logo-ff.png" alt="Free Fire">
+        <h3>Free Fire</h3>
+        <p>Top up & config headshot</p>
+      </div>
+    </div>
+  </section>
 
-  <!-- Kategori Baru -->
-  <h2>🆕 Kategori Baru</h2>
-  <div class="grid">
-    <a href="games/mlbb.html" class="game">
-      <img src="games/assets/logo/logo-mlbb.png" alt="MLBB">
-      <p>MLBB Config Update</p>
-    </a>
-    <a href="games/efootball.html" class="game">
-      <img src="games/assets/logo/logo-efootball.png" alt="eFootball">
-      <p>eFootball Boosted</p>
-    </a>
-  </div>
+  <section>
+    <h2>🆕 Kategori Baru</h2>
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="./logo-mlbb.png" alt="MLBB Config Update">
+        <h3>MLBB Config Update</h3>
+        <p>Update patch terbaru</p>
+      </div>
+      <div class="game-card">
+        <img src="./logo-efootball.png" alt="eFootball Boosted">
+        <h3>eFootball Boosted</h3>
+        <p>Config & akun elite</p>
+      </div>
+    </div>
+  </section>
 
-  <footer>© 2025 JONI PES - Amanah & Responsif</footer>
-
-  <!-- Navbar -->
-  <div class="navbar">
-    <a href="index.html" class="nav-item">
-      <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Home">
-      Home
-    </a>
-    <a href="#" class="nav-item">
-      <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="Transaksi">
-      Transaksi
-    </a>
-    <a href="#" class="nav-item">
-      <img src="https://cdn-icons-png.flaticon.com/512/535/535234.png" alt="Favorit">
-      Favorit
-    </a>
-    <a href="akun.html" class="nav-item active">
-      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Akun">
-      Akun
-    </a>
-  </div>
-
-  <script>
-    function switchTab(tab) {
-      if (tab === 'akun') return;
-      alert(`Fitur ${tab} akan segera hadir 🔧`);
-    }
-    function filterGames() {
-      const input = document.getElementById('searchInput').value.toLowerCase();
-      const games = document.querySelectorAll('.game p');
-      games.forEach(p => {
-        const card = p.parentElement;
-        card.style.display = p.textContent.toLowerCase().includes(input) ? 'block' : 'none';
-      });
-    }
-  </script>
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="#">Transaksi</a>
+    <a href="#">Favorit</a>
+  </nav>
 </body>
 </html>
