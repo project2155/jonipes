@@ -50,27 +50,25 @@
       font-size: 0.9rem;
     }
 
-    /* BANNER SLIDER */
+    /* BANNER SWIPE */
     .banner {
+      position: relative;
       width: 100%;
       overflow: hidden;
-      position: relative;
+      height: 160px;
+      border-radius: 10px;
     }
     .slides {
       display: flex;
+      transition: transform 0.4s ease-in-out;
       width: 300%;
-      animation: slide 22s infinite;
     }
     .slides img {
       width: 100%;
       height: 160px;
       object-fit: cover;
-    }
-    @keyframes slide {
-      0% {transform: translateX(0);}
-      33% {transform: translateX(-100%);}
-      66% {transform: translateX(-200%);}
-      100% {transform: translateX(0);}
+      flex-shrink: 0;
+      user-select: none;
     }
 
     /* MENU ATAS */
@@ -186,9 +184,9 @@
     <input type="text" placeholder="Coba cari game...">
   </div>
 
-  <!-- BANNER -->
+  <!-- BANNER (SWIPE MANUAL) -->
   <div class="banner">
-    <div class="slides">
+    <div class="slides" id="slides">
       <img src="assets/banner/banner1.jpg" alt="Banner 1">
       <img src="assets/banner/banner2.jpg" alt="Banner 2">
       <img src="assets/banner/banner3.jpg" alt="Banner 3">
@@ -265,5 +263,75 @@
     </a>
   </div>
 
+  <!-- SCRIPT: SWIPE MANUAL -->
+  <script>
+    const slides = document.getElementById('slides');
+    let startX = 0;
+    let currentTranslate = 0;
+    let prevTranslate = 0;
+    let currentIndex = 0;
+    const totalSlides = slides.children.length;
+    let isDragging = false;
+
+    slides.addEventListener('touchstart', startTouch);
+    slides.addEventListener('touchmove', moveTouch);
+    slides.addEventListener('touchend', endTouch);
+    slides.addEventListener('mousedown', startDrag);
+    slides.addEventListener('mousemove', moveDrag);
+    slides.addEventListener('mouseup', endDrag);
+    slides.addEventListener('mouseleave', endDrag);
+
+    function startTouch(e) {
+      startX = e.touches[0].clientX;
+      slides.style.transition = 'none';
+    }
+
+    function moveTouch(e) {
+      const diff = e.touches[0].clientX - startX;
+      currentTranslate = prevTranslate + diff;
+      slides.style.transform = `translateX(${currentTranslate}px)`;
+    }
+
+    function endTouch(e) {
+      const diff = e.changedTouches[0].clientX - startX;
+      handleSwipe(diff);
+    }
+
+    function startDrag(e) {
+      e.preventDefault();
+      startX = e.clientX;
+      slides.style.transition = 'none';
+      isDragging = true;
+    }
+
+    function moveDrag(e) {
+      if (!isDragging) return;
+      const diff = e.clientX - startX;
+      currentTranslate = prevTranslate + diff;
+      slides.style.transform = `translateX(${currentTranslate}px)`;
+    }
+
+    function endDrag(e) {
+      if (!isDragging) return;
+      isDragging = false;
+      const diff = e.clientX - startX;
+      handleSwipe(diff);
+    }
+
+    function handleSwipe(diff) {
+      const width = slides.clientWidth / totalSlides;
+      if (diff < -50 && currentIndex < totalSlides - 1) currentIndex++;
+      else if (diff > 50 && currentIndex > 0) currentIndex--;
+      goToSlide(currentIndex);
+    }
+
+    function goToSlide(index) {
+      const width = slides.clientWidth / totalSlides;
+      prevTranslate = -width * index;
+      currentTranslate = prevTranslate;
+      slides.style.transition = 'transform 0.4s ease';
+      slides.style.transform = `translateX(${currentTranslate}px)`;
+    }
+  </script>
 </body>
 </html>
