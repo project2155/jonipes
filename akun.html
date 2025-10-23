@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kategori Akun - JONI PES</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #f9fbff, #e6eaff);
+      color: #222;
+    }
+
+    /* Header */
+    header {
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 12px 15px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header img {
+      width: 38px;
+      border-radius: 8px;
+    }
+    header a {
+      text-decoration: none;
+      color: #7f00ff;
+      font-size: 1.2rem;
+    }
+
+    /* Search Bar */
+    .search-bar {
+      padding: 15px;
+      background: white;
+      border-bottom: 1px solid #ddd;
+    }
+    .search-bar input {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    /* Section Titles */
+    h2 {
+      margin: 18px 15px 10px;
+      font-size: 1.1rem;
+      color: #3a0ca3;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    h2 span {
+      font-size: 1.2rem;
+    }
+
+    /* Game Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      padding: 0 15px 30px;
+    }
+
+    .game {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+      padding: 12px 8px;
+      transition: 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      color: #222;
+    }
+    .game:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(127,0,255,0.3);
+    }
+    .game img {
+      width: 85px; height: 85px;
+      border-radius: 14px;
+      margin-bottom: 8px;
+      object-fit: cover;
+    }
+    .game p {
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #777;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="../index.html">⬅</a>
+    <img src="../games/assets/logo/20251021_190434.png" alt="JONI PES">
+    <span>Kategori Akun</span>
+  </header>
+
+  <!-- SEARCH -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Cari Nama Game..." onkeyup="filterGames()">
+  </div>
+
+  <!-- POPULER -->
+  <h2>🏆 Kategori Populer</h2>
+  <div class="grid" id="populer">
+    <a href="../games/efootball.html" class="game">
+      <img src="../games/assets/logo/logo-efootball.png" alt="eFootball">
+      <p>eFootball Mobile</p>
+    </a>
+    <a href="../games/mlbb.html" class="game">
+      <img src="../games/assets/logo/logo-mlbb.png" alt="MLBB">
+      <p>Mobile Legends</p>
+    </a>
+  </div>
+
+  <!-- BARU -->
+  <h2>🆕 Kategori Baru</h2>
+  <div class="grid">
+    <a href="../games/pubg.html" class="game">
+      <img src="../games/assets/logo/logo-pubg.png" alt="PUBG">
+      <p>PUBG Mobile</p>
+    </a>
+    <a href="../games/freefire.html" class="game">
+      <img src="../games/assets/logo/logo-ff.png" alt="Free Fire">
+      <p>Free Fire</p>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 JONI PES — Semua hak cipta dilindungi
+  </footer>
+
+  <script>
+    function filterGames() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const games = document.querySelectorAll('.game p');
+      games.forEach(p => {
+        const card = p.parentElement;
+        card.style.display = p.textContent.toLowerCase().includes(input) ? 'block' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>
